@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import Home from "./Pages/Home.jsx";
 import NavBar from "./Pages/Components/Navbar.jsx";
 import Footer from "./Pages/Components/Footer";
+import CursorFollower from "./components/CursorFollower.jsx";
+import ScrollToTopButton from "./components/ScrollToTopButton.jsx";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -25,6 +27,8 @@ function ScrollToTop() {
 export default function App() {
   return (
     <>
+      <CursorFollower />
+      <ScrollToTopButton />
       <Background />
       <NavBar />
       <ScrollToTop />

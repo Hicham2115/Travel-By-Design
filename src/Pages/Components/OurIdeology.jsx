@@ -1,5 +1,6 @@
 import React from "react";
 import { Shield, Heart, Eye, Scale, Check } from "lucide-react";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 
 function OurIdeology() {
   const values = [

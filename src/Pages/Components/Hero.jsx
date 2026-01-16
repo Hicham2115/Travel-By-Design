@@ -5,30 +5,62 @@ import {
   Code,
   Gem,
   UserRoundPlus,
-  ArrowDown,
+  // ArrowDown,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import HeroPic from "../../assets/hero-morocco.jpg";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import ArrowDown from "../../assets/fleche-vers-le-bas.png";
+import Hilal from "../../assets/hilal.png";
+import Lampe from "../../assets/lampe.png";
 
 function Hero() {
   return (
     <div className="w-full relative overflow-hidden">
       <div className="relative z-10 p-8 text-center space-y-6 md:space-y-8 pt-20 pb-20">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight animate-fade-in-up text-white">
-          Halal Journeys in Morocco
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight animate-fade-in-up text-white">
+          <span className="flex items-center justify-center gap-2 md:gap-3 flex-wrap">
+            Halal Journeys in Morocco
+          </span>
           <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#e8c127] via-[#e8c127] to-[#e8c127] mt-2 animate-gradient bg-[length:200%_auto]">
             Abu Retreats
           </span>
         </h1>
 
+        {/* Hilal - Left side */}
+        <motion.img
+          src={Hilal}
+          alt="Hilal"
+          className="absolute opacity-40 -z-10 w-12 md:w-16 lg:w-20 origin-top left-4 md:left-8 lg:left-12 top-16 md:top-20 lg:top-24"
+          animate={{ rotate: [-15, 15, -15] }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+
+        {/* Lamp - Right side */}
+        <motion.img
+          src={Lampe}
+          alt="Lamp"
+          className="absolute opacity-10 -z-10 w-12 md:w-16 lg:w-20 origin-top right-4 md:right-8 lg:right-82 top-16 md:top-20 lg:top-42"
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
         {/* Subheading */}
         <p
-          className="text-md md:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up"
+          className="text-md md:text-lg lg:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up"
           style={{ animationDelay: "0.2s" }}
         >
-          Custom-designed halal travel experiences in Morocco — built on trust,
-          transparency, and brotherhood.
+          Experience custom halal travel journeys, crafted with trust,
+          transparency, and brotherhood for unforgettable, worry-free
+          adventures.
         </p>
 
         {/* CTA Buttons */}
@@ -49,7 +81,9 @@ function Hero() {
                 -translate-x-full group-hover:translate-x-full transition-transform duration-700"
               />
 
-              <Gem className="w-5 h-5" />
+              <span className="transition-transform duration-300 group-hover:rotate-90">
+                <Gem className="w-5 h-5" />
+              </span>
               <span>Book a Free Consultation</span>
             </button>
           </Link>
@@ -72,13 +106,21 @@ function Hero() {
             </button>
           </Link>
         </div>
-        <div className="flex flex-col gap-8 justify-center items-center">
-          <span className="text-[#e8c127] text-2xl italic font-bold">
+        <div className="flex flex-col gap-8  mt-8 justify-center items-center">
+          <span className="text-white text-2xl italic font-bold">
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
           </span>
-          <span>
-            <ArrowDown className="scale-140 text-white" />
-          </span>
+          <motion.span
+            animate={{ y: [0, 10, 0] }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <img src={ArrowDown} alt="" width={40} />
+            {/* <ArrowDown className="scale-140 text-white" /> */}
+          </motion.span>
         </div>
       </div>
     </div>
