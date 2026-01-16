@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Background from "./Pages/Components/Background.jsx";
 import { useEffect, useState, lazy, Suspense } from "react";
-import NavBar from "./Pages/Components/Navbar.jsx";
+import NavBar from "./Pages/Components/NavBar.jsx";
 import Footer from "./Pages/Components/Footer";
 import CursorFollower from "./components/CursorFollower.jsx";
 import ScrollToTopButton from "./components/ScrollToTopButton.jsx";
