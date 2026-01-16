@@ -5,8 +5,20 @@ const LoadingScreen = ({ onLoadingComplete }) => {
   const [progress, setProgress] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
-    // Simulate loading progress
+    const handleLoad = () => setIsLoaded(true);
+    if (document.readyState === "complete") {
+      setIsLoaded(true);
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Fast loading progress - completes in ~1-1.5 seconds
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -15,18 +27,24 @@ const LoadingScreen = ({ onLoadingComplete }) => {
             setIsComplete(true);
             setTimeout(() => {
               onLoadingComplete();
-            }, 800); // Wait for exit animation
-          }, 300);
+            }, 1000); // 1s delay to allow exit animation (0.8s) to finish smoothly
+          }, 200);
           return 100;
         }
-        // Faster initial loading, slower near the end for realism
-        const increment = prev < 60 ? Math.random() * 15 : Math.random() * 5;
+
+        // If not loaded yet, stall at 90% to reflect actual readiness
+        if (!isLoaded && prev >= 90) {
+          return prev;
+        }
+
+        // Variable increments
+        const increment = Math.random() * 10 + 5;
         return Math.min(prev + increment, 100);
       });
-    }, 150);
+    }, 100);
 
     return () => clearInterval(interval);
-  }, [onLoadingComplete]);
+  }, [onLoadingComplete, isLoaded]);
 
   return (
     <AnimatePresence>
@@ -35,7 +53,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-10000 flex items-center justify-center bg-linear-to-br from-[#0a4d3c] via-[#0d5e4a] to-[#1a4d3f]"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-linear-to-br from-[#0a4d3c] via-[#0d5e4a] to-[#1a4d3f]"
         >
           {/* Animated Background Pattern */}
           <div className="absolute inset-0 opacity-10">
@@ -91,21 +109,15 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                 width="120"
                 height="120"
                 viewBox="0 0 100 100"
-                className="drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]"
+                className="drop-shadow-[0_0_20px_rgba(212,175,55,0.5)] animate-spin-slow"
                 animate={{
                   y: [0, -10, 0],
-                  rotate: [0, 360],
                 }}
                 transition={{
                   y: {
                     duration: 2,
                     repeat: Infinity,
                     ease: "easeInOut",
-                  },
-                  rotate: {
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "linear",
                   },
                 }}
               >

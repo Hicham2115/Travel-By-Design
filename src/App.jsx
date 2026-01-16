@@ -29,35 +29,24 @@ function ScrollToTop() {
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [showContent, setShowContent] = useState(false);
-
   const handleLoadingComplete = () => {
     setIsLoading(false);
-    // Small delay to ensure smooth transition
-    setTimeout(() => {
-      setShowContent(true);
-    }, 100);
   };
 
   return (
     <>
+      <CursorFollower />
+      <ScrollToTopButton />
+      <Background />
+      <NavBar />
+      <ScrollToTop />
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Suspense>
+      <Footer />
       {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
-
-      {showContent && (
-        <>
-          <CursorFollower />
-          <ScrollToTopButton />
-          <Background />
-          <NavBar />
-          <ScrollToTop />
-          <Suspense fallback={<div className="min-h-screen" />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </Suspense>
-          <Footer />
-        </>
-      )}
     </>
   );
 }
