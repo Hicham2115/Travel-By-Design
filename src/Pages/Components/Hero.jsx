@@ -14,30 +14,70 @@ import { motion } from "framer-motion";
 import ArrowDown from "../../assets/fleche-vers-le-bas.png";
 import Hilal from "../../assets/hilal.png";
 import Lampe from "../../assets/lampe.png";
+import Arabe from "../../assets/arabe.png";
 
 function Hero() {
   return (
     <div className="w-full relative overflow-hidden">
       <div className="relative z-10 p-8 text-center space-y-6 md:space-y-8 pt-20 pb-20">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight animate-fade-in-up text-white">
+        {/* Heading */}
+        <motion.h1
+          className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <span className="flex items-center justify-center gap-2 md:gap-3 flex-wrap">
             Halal Journeys in Morocco
           </span>
           <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#e8c127] via-[#e8c127] to-[#e8c127] mt-2 animate-gradient bg-[length:200%_auto]">
             Abu Retreats
           </span>
-        </h1>
+        </motion.h1>
 
         {/* Hilal - Left side */}
         <motion.img
           src={Hilal}
           alt="Hilal"
           className="absolute opacity-40 -z-10 w-12 md:w-16 lg:w-20 origin-top left-4 md:left-8 lg:left-12 top-16 md:top-20 lg:top-24"
-          animate={{ rotate: [-15, 15, -15] }}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{
+            opacity: 0.4,
+            scale: 1,
+            rotate: [-15, 15, -15],
+          }}
           transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
+            opacity: { duration: 0.6, delay: 0.3 },
+            scale: { duration: 0.6, delay: 0.3 },
+            rotate: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.9,
+            },
+          }}
+        />
+
+        {/* Arabe - Left side */}
+        <motion.img
+          src={Arabe}
+          alt="Arabe"
+          className="absolute opacity-20 -z-10 w-22 md:w-16 lg:w-26 origin-top left-4 md:left-8 lg:left-38 top-32 md:top-40 lg:top-88"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{
+            opacity: 0.2,
+            scale: 1,
+            y: [0, -15, 0],
+          }}
+          transition={{
+            opacity: { duration: 0.6, delay: 0.5 },
+            scale: { duration: 0.6, delay: 0.5 },
+            y: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.1,
+            },
           }}
         />
 
@@ -45,28 +85,43 @@ function Hero() {
         <motion.img
           src={Lampe}
           alt="Lamp"
-          className="absolute opacity-10 -z-10 w-12 md:w-16 lg:w-20 origin-top right-4 md:right-8 lg:right-82 top-16 md:top-20 lg:top-42"
-          animate={{ scale: [1, 1.2, 1] }}
+          className="absolute opacity-10 -z-10 w-12 md:w-16 lg:w-20 origin-top right-4 md:right-8 lg:right-62 top-16 md:top-20 lg:top-42"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{
+            opacity: 0.1,
+            scale: 1,
+            y: [0, -15, 0],
+          }}
           transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
+            opacity: { duration: 0.6, delay: 0.7 },
+            scale: { duration: 0.6, delay: 0.7 },
+            y: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.3,
+            },
           }}
         />
+
         {/* Subheading */}
-        <p
-          className="text-md md:text-lg lg:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up"
-          style={{ animationDelay: "0.2s" }}
+        <motion.p
+          className="text-md md:text-lg lg:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
           Experience custom halal travel journeys, crafted with trust,
           transparency, and brotherhood for unforgettable, worry-free
           adventures.
-        </p>
+        </motion.p>
 
         {/* CTA Buttons */}
-        <div
-          className="flex flex-col sm:flex-row justify-center gap-4 items-center animate-fade-in-up mb-6"
-          style={{ animationDelay: "0.4s" }}
+        <motion.div
+          className="flex flex-col sm:flex-row justify-center gap-4 items-center mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
         >
           <Link to="#contact-us">
             <button
@@ -105,8 +160,15 @@ function Hero() {
               <span>Follow @aburetreats</span>
             </button>
           </Link>
-        </div>
-        <div className="flex flex-col gap-8  mt-8 justify-center items-center">
+        </motion.div>
+
+        {/* Arabic Text and Arrow */}
+        <motion.div
+          className="flex flex-col gap-8 mt-8 justify-center items-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
+        >
           <span className="text-white text-2xl italic font-bold">
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
           </span>
@@ -121,7 +183,7 @@ function Hero() {
             <img src={ArrowDown} alt="" width={40} />
             {/* <ArrowDown className="scale-140 text-white" /> */}
           </motion.span>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

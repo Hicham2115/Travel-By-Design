@@ -1,5 +1,6 @@
 import React from "react";
 import { Shield, Heart, Scale, Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 function WhatMakesUs() {
   const values = [
@@ -33,7 +34,13 @@ function WhatMakesUs() {
     <div className="w-full py-16 lg:py-24 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <h2 className="text-sm font-bold text-[#CFA80F] tracking-wider uppercase mb-4">
             What Makes Us Different
           </h2>
@@ -44,19 +51,27 @@ function WhatMakesUs() {
             We believe travel should be personal, flexible, and aligned with
             your values.
           </p>
-        </div>
+        </motion.div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (
-              <div
+              <motion.div
                 key={index}
                 className="group relative bg-[#fbf9f2] rounded-2xl p-4 lg:p-4
                 shadow-lg hover:shadow-2xl transition-all duration-300
                 border border-gray-100 hover:border-[#CFA80F]
                 transform hover:-translate-y-1"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                  ease: "easeOut",
+                }}
               >
                 {/* Icon Container */}
                 <div
@@ -80,7 +95,7 @@ function WhatMakesUs() {
                 <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
                   {value.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

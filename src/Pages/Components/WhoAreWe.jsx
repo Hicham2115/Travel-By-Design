@@ -6,6 +6,7 @@ import {
   Sparkles,
   ShieldQuestionMark,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 import pic1 from "../../assets/DSC00269.JPG";
 import pic2 from "../../assets/DSC00287.JPG";
@@ -34,7 +35,13 @@ function WhoAreWe() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Left Content - Text */}
-          <div className="flex-1 text-center lg:text-left animate-fade-in-up">
+          <motion.div
+            className="flex-1 text-center lg:text-left"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             {/* Badge */}
             <div className="inline-block mb-6">
               <span className="text-xs font-bold text-[#e8c32e] bg-[#105b46] px-4 py-2 rounded-full uppercase tracking-wider border border-[#e8c32e]/20">
@@ -67,10 +74,17 @@ function WhoAreWe() {
             {/* Feature List */}
             <div className="space-y-4 mb-8 mt-6">
               {features.map((feature, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="flex items-center gap-3 group animate-slide-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="flex items-center gap-3 group"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1,
+                    ease: "easeOut",
+                  }}
                 >
                   <div className="w-10 h-10 bg-[#e8c32e] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
                     <feature.icon className="w-5 h-5 text-white transition-colors duration-300" />
@@ -78,7 +92,7 @@ function WhoAreWe() {
                   <span className="text-white font-semibold group-hover:text-[#e8c32e] transition-colors duration-300">
                     {feature.text}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -88,12 +102,15 @@ function WhoAreWe() {
               <span>Learn How It Works</span>
               <CheckCircle className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             </button> */}
-          </div>
+          </motion.div>
 
           {/* Right Content - Image Collage */}
-          <div
-            className="flex-1 w-full max-w-lg lg:max-w-none animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
+          <motion.div
+            className="flex-1 w-full max-w-lg lg:max-w-none"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             <div className="grid grid-cols-2 gap-4 h-[500px]">
               {/* Top Left - Large Image */}
@@ -134,38 +151,9 @@ function WhoAreWe() {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes slide-in {
-          from {
-            opacity: 0;
-            transform: translateX(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        .animate-fade-in-up {
-          animation: fade-in-up 1s ease-out;
-        }
-        .animate-slide-in {
-          animation: slide-in 0.8s ease-out;
-        }
-      `}</style>
     </div>
   );
 }

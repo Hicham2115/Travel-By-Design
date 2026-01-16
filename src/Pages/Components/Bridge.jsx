@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import pic1 from "../../assets/DSC00163.JPG";
 
 function Bridge() {
@@ -9,7 +10,13 @@ function Bridge() {
   flex flex-col lg:flex-row items-center justify-between gap-12"
       >
         {/* Text Section */}
-        <div className="flex-1 mb-12 lg:mb-0 animate-fade-in-up">
+        <motion.div
+          className="flex-1 mb-12 lg:mb-0"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6">
             That question stayed with me <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e8c127] to-[#CFA80F]">
@@ -22,10 +29,16 @@ function Bridge() {
             while traveling. Not as tourists to be exploited, but as honored
             guests.
           </p>
-        </div>
+        </motion.div>
 
         {/* Image Section */}
-        <div className="relative group flex-1 max-w-lg">
+        <motion.div
+          className="relative group flex-1 max-w-lg"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        >
           {/* Glow */}
           <div
             className="absolute inset-0 bg-gradient-to-r from-[#CFA80F]/15 to-[#e8c127]/15
@@ -55,7 +68,7 @@ function Bridge() {
             <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#CFA80F]/15 to-transparent z-10" />
             <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-[#CFA80F]/15 to-transparent z-10" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

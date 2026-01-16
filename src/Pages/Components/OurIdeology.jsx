@@ -38,7 +38,13 @@ function OurIdeology() {
     <div className="w-full py-20 lg:py-28 relative overflow-hidden -mt-20">
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <p className="text-sm sm:text-base font-semibold text-[#e8c127] mb-3 tracking-widest uppercase">
             Our Ideology
           </p>
@@ -52,18 +58,26 @@ function OurIdeology() {
             Our foundation is built on the timeless principles that guide every
             Muslim life.
           </p>
-        </div>
+        </motion.div>
 
         {/* Values Grid */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
           {values.map((value, index) => (
-            <div
+            <motion.div
               key={index}
               className="group relative bg-[#fbf9f2] rounded-2xl p-4 sm:p-6 border-2 border-gray-100
             hover:border-[#CFA80F] transition-all duration-500
             hover:shadow-[0_0_40px_rgba(207,168,15,0.2)]
             hover:-translate-y-2 cursor-pointer overflow-hidden
             w-full sm:w-[48%] lg:w-[35%]"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
             >
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#CFA80F]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -98,16 +112,20 @@ function OurIdeology() {
 
               {/* Bottom accent line */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#CFA80F] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      <div
+      <motion.div
         className="mt-20 mx-auto max-w-2xl text-center
     bg-[#FEFAEE] rounded-2xl p-2 sm:p-4
     border-2 border-gray-100 hover:border-[#CFA80F]
     transition-all duration-500"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
       >
         <p className="text-lg sm:text-xl font-medium text-gray-800 leading-relaxed">
           “O you who believe, do not consume one another’s wealth unjustly, but
@@ -117,7 +135,7 @@ function OurIdeology() {
         <p className="mt-4 text-sm sm:text-base text-[#CFA80F] font-semibold">
           — Qur’an 4:29
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 }
