@@ -184,7 +184,7 @@ function Footer() {
               &copy; {currentYear} Travel By Design. All rights reserved.
             </p>
 
-            <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
+            {/* <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
               <a
                 href="/privacy"
                 className="text-white hover:text-[#CFA80F] transition-colors"
@@ -203,7 +203,7 @@ function Footer() {
               >
                 Cookie Policy
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

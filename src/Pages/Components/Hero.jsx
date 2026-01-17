@@ -143,7 +143,7 @@ function Hero() {
             </button>
           </Link>
 
-          <Link to="devlopment">
+          <a href="https://www.instagram.com/aburetreats/" target="_blank">
             <button
               className="group cursor-pointer relative px-6 h-14 min-w-[280px]
               bg-[#1f4121] text-white font-bold rounded-xl border-2 border-[#1f4121]
@@ -159,7 +159,7 @@ function Hero() {
               <UserRoundPlus className="w-5 h-5" />
               <span>Follow @aburetreats</span>
             </button>
-          </Link>
+          </a>
         </motion.div>
 
         {/* Arabic Text and Arrow */}
