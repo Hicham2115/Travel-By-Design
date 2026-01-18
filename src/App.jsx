@@ -5,6 +5,7 @@ import NavBar from "./Pages/Components/NavBar.jsx";
 import Footer from "./Pages/Components/Footer";
 import CursorFollower from "./components/CursorFollower.jsx";
 import ScrollToTopButton from "./components/ScrollToTopButton.jsx";
+import WhatsAppButton from "./components/WhatsAppButton.jsx";
 import LoadingScreen from "./components/LoadingScreen.jsx";
 
 // Lazy load the Home component for better performance
@@ -37,6 +38,7 @@ export default function App() {
     <>
       <CursorFollower />
       <ScrollToTopButton />
+      <WhatsAppButton />
       <Background />
       <NavBar />
       <ScrollToTop />
