@@ -132,7 +132,7 @@ function Footer() {
                   href="tel:+1234567890"
                   className="group-hover:text-gray-300 transition-colors"
                 >
-                  +212 649-557449
+                  +212 647-255163
                 </a>
               </li>
               <li className="flex items-center gap-3 text-gray-200 text-sm group">
@@ -141,7 +141,7 @@ function Footer() {
                   href="mailto:hello@yourbrand.com"
                   className="group-hover:text-gray-300 transition-colors"
                 >
-                  advertisingstallion@gmail.com
+                  travelbydesign@gmail.com
                 </a>
               </li>
             </ul>
