@@ -29,7 +29,7 @@ function Contact() {
   };
 
   return (
-    <div className="w-[90%] lg:w-[70%] rounded-xl mx-auto py-8 lg:py-12 bg-[#122124c9] backdrop-blur-sm">
+    <div className="w-[90%] lg:w-[60%] rounded-xl mx-auto py-8 lg:py-6 bg-[#122124c9] backdrop-blur-sm">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 flex flex-col justify-center items-center">
@@ -45,7 +45,7 @@ function Contact() {
               onClick={() => {
                 window.open(
                   "https://calendly.com/momsvsanxiety/30min",
-                  "_blank"
+                  "_blank",
                 );
               }}
               className="group cursor-pointer relative h-14 min-w-[200px] 
@@ -66,8 +66,7 @@ function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="space-y-6">
-          {/* First Name */}
+        {/* <div className="space-y-6">
           <div>
             <label
               htmlFor="firstName"
@@ -89,7 +88,6 @@ function Contact() {
             />
           </div>
 
-          {/* Email */}
           <div>
             <label
               htmlFor="email"
@@ -111,7 +109,6 @@ function Contact() {
             />
           </div>
 
-          {/* Subject */}
           <div>
             <label
               htmlFor="subject"
@@ -133,7 +130,6 @@ function Contact() {
             />
           </div>
 
-          {/* Message */}
           <div>
             <label
               htmlFor="message"
@@ -155,7 +151,6 @@ function Contact() {
             ></textarea>
           </div>
 
-          {/* Submit Button */}
           <div className="text-center pt-4">
             <button
               onClick={handleSubmit}
@@ -168,7 +163,7 @@ function Contact() {
               Send Message
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
