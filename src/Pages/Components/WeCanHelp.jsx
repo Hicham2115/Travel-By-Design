@@ -57,7 +57,10 @@ const services = [
 
 function WeCanHelp() {
   return (
-    <div className="min-h-screen py-10 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8" id="Services">
+    <div
+      className="min-h-screen py-10 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8"
+      id="Services"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
@@ -70,7 +73,7 @@ function WeCanHelp() {
             We Can Help You
             <span className="text-[#ace044]"> With Following</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-white max-w-3xl mx-auto px-4 leading-relaxed">
             Comprehensive solutions designed to elevate your business and drive
             sustainable growth in the digital age
           </p>

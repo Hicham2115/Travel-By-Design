@@ -1,0 +1,176 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  height: 100%;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px !important;
+  left: 90% !important;
+  transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+  background-color: #e8c32e !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e8c32e !important;
+  opacity: 1;
+}
+
+.swiper1 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+
+.swiper1-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper1-slide img {
+  display: block;
+  width: 100%;
+}
+
+.mySwiper1 {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.mySwiper1 .swiper-slide {
+  width: 100% !important;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper3,
+.mySwiper2,
+.mySwiper3 {
+  width: 400px;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.swiper3-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper3-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Pagination dots */
+.swiper3-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.swiper3-pagination-bullet-active {
+  background-color: #c9a961;
+}
+
+/* Navigation buttons */
+.swiper3-button-next,
+.swiper3-button-prev {
+  color: #c9a961;
+}
+
+.swiper3-button-next:after,
+.swiper3-button-prev:after {
+  font-size: 20px;
+}
+
+.swiper3-button-next:hover,
+.swiper3-button-prev:hover {
+  color: #ddb570;
+}
+
+/* Color slides (fallback if images don't load) */
+
+.swiper3-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+.swiper3-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+}
+
+.swiper3-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+.swiper3-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+.swiper3-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+.swiper3-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper3-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper3-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper3-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper3-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
+}

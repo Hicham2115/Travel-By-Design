@@ -120,7 +120,7 @@ function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-200 text-sm group">
                 <MapPin className="w-5 h-5 text-[#CFA80F] shrink-0 mt-0.5 group-hover:text-[#CFA80F] transition-colors" />
-                <span className="group-hover:text-gray-300 transition-colors">
+                <span className="group-hover:text-white transition-colors">
                   Randome Adresse
                   <br />
                   Casablanca, 2000
@@ -130,7 +130,7 @@ function Footer() {
                 <Phone className="w-5 h-5 text-[#CFA80F] shrink-0 group-hover:text-[#CFA80F] transition-colors" />
                 <a
                   href="tel:+1234567890"
-                  className="group-hover:text-gray-300 transition-colors"
+                  className="group-hover:text-white transition-colors"
                 >
                   +212 647-255163
                 </a>
@@ -139,7 +139,7 @@ function Footer() {
                 <Mail className="w-5 h-5 text-[#CFA80F] shrink-0 group-hover:text-[#CFA80F] transition-colors" />
                 <a
                   href="mailto:hello@yourbrand.com"
-                  className="group-hover:text-gray-300 transition-colors"
+                  className="group-hover:text-white transition-colors"
                 >
                   travelbydesign@gmail.com
                 </a>

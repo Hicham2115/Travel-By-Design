@@ -18,6 +18,7 @@ const navigationLinks = [
   { href: "#home", label: "Home" },
   { href: "#our-story", label: "Our Story" },
   { href: "#our-ideology", label: "Our Ideology" },
+  { href: "#serivces", label: "Our Services" },
   { href: "#about-us", label: "About Us" },
 ];
 

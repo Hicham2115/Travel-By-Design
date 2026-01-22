@@ -24,7 +24,7 @@ function Bridge() {
             </span>
           </h2>
 
-          <p className="text-lg text-gray-300 max-w-2xl">
+          <p className="text-lg text-white max-w-2xl">
             Abu Retreats was created to serve Muslims who care about their faith
             while traveling. Not as tourists to be exploited, but as honored
             guests.

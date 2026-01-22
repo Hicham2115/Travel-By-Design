@@ -55,7 +55,7 @@ function WhoAreWe() {
             </h2>
 
             {/* Description */}
-            <p className="text-lg text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="text-lg text-white leading-relaxed max-w-xl mx-auto lg:mx-0">
               I grew up in a Moroccan city shaped by tourism. For years, I
               watched how travel here was designed almost exclusively for
               non-Muslims — alcohol everywhere, environments that conflict with
@@ -66,7 +66,7 @@ function WhoAreWe() {
               At the same time, I kept asking a simple question:
             </span>
             <br />
-            <p className="text-lg italic text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0">
               "Who is taking care of Muslims who want to explore Morocco without
               compromising their dīn?"
             </p>
