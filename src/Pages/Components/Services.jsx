@@ -285,7 +285,7 @@ function Services() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <div className="relative w-full h-[350px] rounded-2xl overflow-hidden">
+            <div className="relative w-full rounded-2xl overflow-hidden">
               <Swiper
                 effect={"cube"}
                 grabCursor={true}
@@ -401,7 +401,7 @@ function Services() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <div className="relative w-full h-[350px] rounded-2xl overflow-hidden">
+            <div className="relative w-full rounded-2xl overflow-hidden">
               <Swiper
                 effect={"cards"}
                 grabCursor={true}
