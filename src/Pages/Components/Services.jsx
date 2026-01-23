@@ -230,54 +230,7 @@ function Services() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          {/* Left Content - Text */}
-          <motion.div
-            className="flex-1 text-center lg:text-left"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <span className="font-bold text-lg text-[#e7c129]">
-              🧭 Guided Experiences & Activities{" "}
-            </span>
-            <br />
-            <p className="text-lg italic text-white mt-4 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              "At Abu Retreats, activities are not rushed checklists or tourist
-              traps designed to move you quickly from one stop to the next. We
-              don’t believe in overcrowded schedules, forced stops, or
-              experiences that feel disconnected from who you are and what you
-              value. Instead, every activity is a guided experience, carefully
-              planned with intention and care."
-            </p>
-
-            {/* Feature List */}
-            <div className="space-y-4 mb-8 mt-6">
-              {features2.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center gap-3 group"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.6,
-                    delay: index * 0.1,
-                    ease: "easeOut",
-                  }}
-                >
-                  <div className="w-10 h-10 bg-[#e8c32e] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
-                    <feature.icon className="w-5 h-5 text-white transition-colors duration-300" />
-                  </div>
-                  <span className="text-white font-semibold group-hover:text-[#e8c32e] transition-colors duration-300">
-                    {feature.text}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Right Content - Image Collage */}
+          {/* Left Content  */}
           <motion.div
             className="flex-1 w-full max-w-lg lg:max-w-none"
             initial={{ opacity: 0, y: 30 }}
@@ -339,6 +292,57 @@ function Services() {
                   <img src={activities14} alt="Activities" />
                 </SwiperSlide>
               </Swiper>
+            </div>
+          </motion.div>
+
+
+          {/* Right Content  */}
+         
+
+
+           <motion.div
+            className="flex-1 text-center lg:text-left"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <span className="font-bold text-lg text-[#e7c129]">
+              🧭 Guided Experiences & Activities{" "}
+            </span>
+            <br />
+            <p className="text-lg italic text-white mt-4 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              "At Abu Retreats, activities are not rushed checklists or tourist
+              traps designed to move you quickly from one stop to the next. We
+              don’t believe in overcrowded schedules, forced stops, or
+              experiences that feel disconnected from who you are and what you
+              value. Instead, every activity is a guided experience, carefully
+              planned with intention and care."
+            </p>
+
+            {/* Feature List */}
+            <div className="space-y-4 mb-8 mt-6">
+              {features2.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center gap-3 group"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1,
+                    ease: "easeOut",
+                  }}
+                >
+                  <div className="w-10 h-10 bg-[#e8c32e] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-all duration-300">
+                    <feature.icon className="w-5 h-5 text-white transition-colors duration-300" />
+                  </div>
+                  <span className="text-white font-semibold group-hover:text-[#e8c32e] transition-colors duration-300">
+                    {feature.text}
+                  </span>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
