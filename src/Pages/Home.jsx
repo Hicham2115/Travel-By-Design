@@ -4,6 +4,7 @@ import WhoAreWe from "./Components/WhoAreWe";
 import Bridge from "./Components/Bridge";
 import OurIdeology from "./Components/OurIdeology";
 import WhatMakesUs from "./Components/WhatMakesUs";
+import Activities from "./Components/Activities";
 import Message from "./Components/Message";
 import OurLanguages from "./Components/OurLanguages";
 import Contact from "./Components/Contact";
@@ -26,6 +27,9 @@ function Home() {
       </section>
       <section id="serivces">
         <Services />
+      </section>
+      <section id="activities">
+        <Activities />
       </section>
       <Message />
       {/* <OurLanguages /> */}
