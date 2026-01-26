@@ -67,36 +67,32 @@ function Contact() {
               <span className="text-sm">Custom Solutions</span>
             </div>
           </div>
-
-          {/* CTA Button */}
-          <div>
-            <button
-              onClick={() => {
-                window.open(
-                  "https://calendly.com/momsvsanxiety/30min",
-                  "_blank",
-                );
-              }}
-              className="group cursor-pointer relative h-16 min-w-[280px] px-8
+        </div>
+        {/* CTA Button */}
+        <div className="flex flex-col justify-center  items-center flex-0">
+          <button
+            onClick={() => {
+              window.open("https://calendly.com/momsvsanxiety/30min", "_blank");
+            }}
+            className="group cursor-pointer relative h-16 min-w-[280px] px-8
                         bg-gradient-to-r from-[#2d5a2f] to-[#3a7a3d] text-white font-bold text-lg rounded-xl 
-                        
+                        border-2 border-[#e8c32e] px-6
                         hover:text-white hover:shadow-[0_0_30px_rgba(232,195,46,0.5)]
-                        transition-all duration-300 shadow-lg hover:scale-105
+                        transition-all duration-300 shadow-lg hover:scale-105 w-[50%]
                         flex items-center gap-3 justify-center overflow-hidden"
-            >
-              <span
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e8c32e]/30 to-transparent
+          >
+            <span
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e8c32e]/30 to-transparent
                           -translate-x-full group-hover:translate-x-full transition-transform duration-700"
-              />
+            />
 
-              <Phone className="w-6 h-6 animate-pulse" />
-              <span>Schedule Your Free Call Now</span>
-            </button>
+            <Phone className="w-6 h-6 animate-pulse" />
+            <span>Book Your Free Call</span>
+          </button>
 
-            <p className="text-sm text-gray-400 mt-4">
-              ⏱️ Available slots filling fast · Select your preferred time
-            </p>
-          </div>
+          <p className="text-sm text-gray-400 mt-4 ">
+            ⏱️ Available slots filling fast · Select your preferred time
+          </p>
         </div>
       </div>
     </div>

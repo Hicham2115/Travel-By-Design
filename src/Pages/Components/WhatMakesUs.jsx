@@ -108,7 +108,7 @@ function WhatMakesUs() {
           }}
           className="group cursor-pointer relative h-14 min-w-[200px] 
                                     bg-gradient-to-r from-[#2d5a2f] to-[#3a7a3d] text-white font-bold rounded-xl 
-                                    px-6
+                                    px-6 border-2 border-[#e8c32e]
                                     hover:text-white hover:shadow-[#e8c32e]/50
                                     transition-all duration-300 shadow-lg hover:scale-102
                                     flex items-center gap-3 justify-center overflow-hidden"
@@ -119,7 +119,7 @@ function WhatMakesUs() {
           />
 
           <Phone className="w-5 h-5" />
-          <span>Secure Your Spot</span>
+          <span>Book Your Free Call</span>
         </button>
       </div>
     </div>
