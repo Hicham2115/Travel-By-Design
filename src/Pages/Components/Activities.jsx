@@ -1,5 +1,13 @@
 import React from "react";
-import { Heart, Wind, Zap, Compass, Mountain, Smile } from "lucide-react";
+import {
+  Heart,
+  Wind,
+  Zap,
+  Compass,
+  Mountain,
+  Smile,
+  Phone,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 function Activities() {
@@ -104,6 +112,28 @@ function Activities() {
             );
           })}
         </div>
+      </div>
+
+      <div className="flex justify-center mt-20">
+        <button
+          onClick={() => {
+            window.open("https://calendly.com/momsvsanxiety/30min", "_blank");
+          }}
+          className="group cursor-pointer relative h-14 min-w-[200px] 
+                                    bg-gradient-to-r from-[#2d5a2f] to-[#3a7a3d] text-white font-bold rounded-xl 
+                                    
+                                    hover:text-white hover:shadow-[#e8c32e]/50
+                                    transition-all duration-300 shadow-lg hover:scale-102
+                                    flex items-center gap-3 justify-center overflow-hidden"
+        >
+          <span
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e8c32e]/30 to-transparent
+                                      -translate-x-full group-hover:translate-x-full transition-transform duration-700"
+          />
+
+          <Phone className="w-5 h-5" />
+          <span>Book a Call</span>
+        </button>
       </div>
     </div>
   );

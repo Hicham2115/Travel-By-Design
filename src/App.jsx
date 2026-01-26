@@ -7,6 +7,7 @@ import CursorFollower from "./components/CursorFollower.jsx";
 import ScrollToTopButton from "./components/ScrollToTopButton.jsx";
 import WhatsAppButton from "./components/WhatsAppButton.jsx";
 import LoadingScreen from "./components/LoadingScreen.jsx";
+import BookCallPopup from "./Pages/Components/BookCallPopup.jsx";
 
 // Lazy load the Home component for better performance
 const Home = lazy(() => import("./Pages/Home.jsx"));
@@ -36,8 +37,10 @@ export default function App() {
 
   return (
     <>
+      <BookCallPopup />
+
       <CursorFollower />
-      <ScrollToTopButton />
+      {/* <ScrollToTopButton /> */}
       <WhatsAppButton />
       <Background />
       <NavBar />

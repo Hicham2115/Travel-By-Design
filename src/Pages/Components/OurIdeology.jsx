@@ -1,5 +1,5 @@
 import React from "react";
-import { Shield, Heart, Eye, Scale, Check } from "lucide-react";
+import { Shield, Heart, Eye, Scale, Check, Phone } from "lucide-react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
 function OurIdeology() {
@@ -118,8 +118,9 @@ function OurIdeology() {
       </div>
 
       <motion.div
-        className="mt-20 mx-auto max-w-2xl text-center
-    bg-[#FEFAEE] rounded-2xl p-2 sm:p-4
+        className="mt-12 sm:mt-16 lg:mt-20 mx-auto max-w-2xl px-4
+        text-center
+    bg-[#FEFAEE] rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8
     border-2 border-gray-100 hover:border-[#CFA80F]
     transition-all duration-500"
         initial={{ opacity: 0, y: 30 }}
@@ -127,15 +128,37 @@ function OurIdeology() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
       >
-        <p className="text-lg sm:text-xl font-medium text-gray-800 leading-relaxed">
-          “O you who believe, do not consume one another’s wealth unjustly, but
-          only in lawful business by mutual consent.”
+        <p className="text-base sm:text-lg lg:text-xl font-medium text-gray-800 leading-relaxed">
+          "O you who believe, do not consume one another's wealth unjustly, but
+          only in lawful business by mutual consent."
         </p>
 
-        <p className="mt-4 text-sm sm:text-base text-[#CFA80F] font-semibold">
-          — Qur’an 4:29
+        <p className="mt-3 sm:mt-4 text-sm sm:text-base text-[#CFA80F] font-semibold">
+          — Qur'an 4:29
         </p>
       </motion.div>
+
+      <div className="flex justify-center mt-10">
+        <button
+          onClick={() => {
+            window.open("https://calendly.com/momsvsanxiety/30min", "_blank");
+          }}
+          className="group cursor-pointer relative h-14 min-w-[200px] 
+                                    bg-gradient-to-r from-[#2d5a2f] to-[#3a7a3d] text-white font-bold rounded-xl 
+                                    px-6
+                                    hover:text-white hover:shadow-[#e8c32e]/50
+                                    transition-all duration-300 shadow-lg hover:scale-102
+                                    flex items-center gap-3 justify-center overflow-hidden"
+        >
+          <span
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e8c32e]/30 to-transparent
+                                      -translate-x-full group-hover:translate-x-full transition-transform duration-700"
+          />
+
+          <Phone className="w-5 h-5" />
+          <span>Claim Your Free Call</span>
+        </button>
+      </div>
     </div>
   );
 }

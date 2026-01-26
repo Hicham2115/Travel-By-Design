@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Phone, Send } from "lucide-react";
+import { Phone, Send, CheckCircle2, Sparkles } from "lucide-react";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -29,17 +29,46 @@ function Contact() {
   };
 
   return (
-    <div className="w-[90%] lg:w-[60%] rounded-xl mx-auto py-8 lg:py-6 bg-[#122124c9] backdrop-blur-sm">
+    <div className="w-[90%] lg:w-[60%] rounded-xl mx-auto py-12 lg:py-16 bg-[#122124c9] backdrop-blur-sm">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 flex flex-col justify-center items-center">
-          <h2 className="text-sm font-bold text-[#CFA80F] tracking-wider uppercase mb-4">
-            We'll take care of the rest.
+          <div className="inline-flex items-center gap-2 bg-[#CFA80F]/10 px-4 py-2 rounded-full mb-6">
+            <Sparkles className="w-4 h-4 text-[#e8c32e]" />
+            <span className="text-sm font-semibold text-[#e8c32e] tracking-wide">
+              FREE 30-Minute Consultation
+            </span>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
+            Ready to Travel with
+            <span className="block text-[#e8c32e] mt-2">
+              Complete Peace of Mind?
+            </span>
           </h2>
-          <p className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-6">
-            Travel with <span className="text-[#CFA80F]">Peace</span>
+
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl">
+            Book your free consultation and discover how we handle everything—so
+            you can focus on making memories.
           </p>
 
+          {/* Benefits */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 w-full max-w-2xl">
+            <div className="flex items-center gap-2 text-white bg-white/5 px-4 py-3 rounded-lg">
+              <CheckCircle2 className="w-5 h-5 text-[#e8c32e] flex-shrink-0" />
+              <span className="text-sm">No Obligations</span>
+            </div>
+            <div className="flex items-center gap-2 text-white bg-white/5 px-4 py-3 rounded-lg">
+              <CheckCircle2 className="w-5 h-5 text-[#e8c32e] flex-shrink-0" />
+              <span className="text-sm">Expert Guidance</span>
+            </div>
+            <div className="flex items-center gap-2 text-white bg-white/5 px-4 py-3 rounded-lg">
+              <CheckCircle2 className="w-5 h-5 text-[#e8c32e] flex-shrink-0" />
+              <span className="text-sm">Custom Solutions</span>
+            </div>
+          </div>
+
+          {/* CTA Button */}
           <div>
             <button
               onClick={() => {
@@ -48,122 +77,27 @@ function Contact() {
                   "_blank",
                 );
               }}
-              className="group cursor-pointer relative h-14 min-w-[200px] 
-                        bg-[#1f4121] text-white font-bold rounded-xl border-2 border-[#1f4121]
-                         hover:text-white
+              className="group cursor-pointer relative h-16 min-w-[280px] px-8
+                        bg-gradient-to-r from-[#2d5a2f] to-[#3a7a3d] text-white font-bold text-lg rounded-xl 
+                        
+                        hover:text-white hover:shadow-[0_0_30px_rgba(232,195,46,0.5)]
                         transition-all duration-300 shadow-lg hover:scale-105
                         flex items-center gap-3 justify-center overflow-hidden"
             >
               <span
-                className="absolute inset-0 bg-linear-to-r from-transparent via-[#65891c]/10 to-transparent
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e8c32e]/30 to-transparent
                           -translate-x-full group-hover:translate-x-full transition-transform duration-700"
               />
 
-              <Phone className="w-5 h-5" />
-              <span>Book a Call</span>
+              <Phone className="w-6 h-6 animate-pulse" />
+              <span>Schedule Your Free Call Now</span>
             </button>
+
+            <p className="text-sm text-gray-400 mt-4">
+              ⏱️ Available slots filling fast · Select your preferred time
+            </p>
           </div>
         </div>
-
-        {/* Contact Form */}
-        {/* <div className="space-y-6">
-          <div>
-            <label
-              htmlFor="firstName"
-              className="block text-sm font-semibold text-white mb-2"
-            >
-              First Name
-            </label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 
-                text-white placeholder-gray-400 focus:outline-none focus:border-[#CFA80F] 
-                focus:ring-2 focus:ring-[#CFA80F]/50 transition-all duration-300"
-              placeholder="Enter your first name"
-              required
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-semibold text-white mb-2"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 
-                text-white placeholder-gray-400 focus:outline-none focus:border-[#CFA80F] 
-                focus:ring-2 focus:ring-[#CFA80F]/50 transition-all duration-300"
-              placeholder="your.email@example.com"
-              required
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="subject"
-              className="block text-sm font-semibold text-white mb-2"
-            >
-              Subject
-            </label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 
-                text-white placeholder-gray-400 focus:outline-none focus:border-[#CFA80F] 
-                focus:ring-2 focus:ring-[#CFA80F]/50 transition-all duration-300"
-              placeholder="What's this about?"
-              required
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-semibold text-white mb-2"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows="5"
-              className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 
-                text-white placeholder-gray-400 focus:outline-none focus:border-[#CFA80F] 
-                focus:ring-2 focus:ring-[#CFA80F]/50 transition-all duration-300 resize-none"
-              placeholder="Tell us about your dream journey..."
-              required
-            ></textarea>
-          </div>
-
-          <div className="text-center pt-4">
-            <button
-              onClick={handleSubmit}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#CFA80F] to-[#e8c127] 
-                text-white font-bold text-lg rounded-lg shadow-lg 
-                hover:shadow-xl hover:scale-105 transform transition-all duration-300
-                focus:outline-none focus:ring-4 focus:ring-[#CFA80F]/50"
-            >
-              <Send className="w-5 h-5" />
-              Send Message
-            </button>
-          </div>
-        </div> */}
       </div>
     </div>
   );

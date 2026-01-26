@@ -174,3 +174,29 @@
 .swiper3-slide:nth-child(10n) {
   background-color: rgb(54, 94, 77);
 }
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #cfa80f 0%, #e8c32e 100%);
+  border-radius: 10px;
+  border: 2px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e8c32e 0%, #f0d040 100%);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cfa80f #1a1a1a;
+}
