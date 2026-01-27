@@ -16,11 +16,18 @@ import pic4 from "../../assets/DSC00069.JPG";
 
 function WhoAreWe() {
   const features = [
-    { icon: ShieldQuestionMark, text: "Where would they stay?" },
-    { icon: ShieldQuestionMark, text: "Who would guide them with honesty?" },
     {
       icon: ShieldQuestionMark,
-      text: "Who would treat them as brothers, not numbers?",
+      text: "A travel experience in Morocco that respects your dīn.",
+    },
+    { icon: ShieldQuestionMark, text: "Halal-friendly stays and experiences" },
+    {
+      icon: ShieldQuestionMark,
+      text: "Honest guidance you can trust",
+    },
+    {
+      icon: ShieldQuestionMark,
+      text: "A brotherhood-first approach  not a transactional one",
     },
   ];
 
@@ -55,22 +62,24 @@ function WhoAreWe() {
               <span className="text-white">Who We Are</span>
             </h2>
 
+            <h6 className="text-xl sm:text-xl lg:text-xl xl:text-xl font-black tracking-tight mb-4 sm:mb-6 leading-tight px-2">
+              <span className="text-white">
+                Assalamu Alaykum I’m Ali (Abu Retreats).
+              </span>
+            </h6>
+
             {/* Description */}
             <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
-              I grew up in a Moroccan city shaped by tourism. For years, I
-              watched how travel here was designed almost exclusively for
-              non-Muslims — alcohol everywhere, environments that conflict with
-              modesty, and a system driven by profit rather than people.
+              I grew up in Morocco surrounded by tourism, and I saw a consistent
+              gap: many travel experiences were designed without considering
+              Muslim values from alcohol-centered spaces to environments that
+              challenge modesty, often prioritizing volume and profit over real
+              care.
             </p>
 
             <span className="font-bold text-base sm:text-lg lg:text-xl text-[#e7c129] block mb-2 sm:mb-3 px-2">
-              At the same time, I kept asking a simple question:
+              So I built Abu Retreats to answer a real need:
             </span>
-
-            <p className="text-sm sm:text-base lg:text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
-              "Who is taking care of Muslims who want to explore Morocco without
-              compromising their dīn?"
-            </p>
 
             {/* Feature List */}
             <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 px-2">
@@ -96,6 +105,12 @@ function WhoAreWe() {
                 </motion.div>
               ))}
             </div>
+
+            <span className="font-bold text-base sm:text-lg lg:text-lg text-white block mb-2 sm:mb-3 px-2">
+              We design trips that fit your schedule, comfort level, preferred
+              destinations, and budget, while keeping the experience aligned
+              with Islamic values.
+            </span>
           </motion.div>
 
           {/* Right Content - Image Collage */}

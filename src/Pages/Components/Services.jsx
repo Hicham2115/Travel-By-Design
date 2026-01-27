@@ -61,7 +61,7 @@ function Services() {
     },
     {
       icon: ShieldQuestionMark,
-      text: "Punctual and well-planned — no rushing, no chaos",
+      text: "Punctual and well-planned  no rushing, no chaos",
     },
     {
       icon: ShieldQuestionMark,
@@ -69,7 +69,7 @@ function Services() {
     },
     {
       icon: ShieldQuestionMark,
-      text: "Adapted to your needs (families, elders, retreats, luggage, prayer stops)",
+      text: "Adapted to your needs (families, elders, retreats, luggage, prayer stop).",
     },
   ];
 
@@ -80,15 +80,19 @@ function Services() {
     },
     {
       icon: ShieldQuestionMark,
-      text: "Accommodation check-ins",
+      text: "Smooth accommodation check-ins",
     },
     {
       icon: ShieldQuestionMark,
-      text: "Prayer time awareness",
+      text: "Prayer-time awareness built into the day",
     },
     {
       icon: ShieldQuestionMark,
-      text: "Activity planning without clashes or pressure",
+      text: "Thoughtful planning (no clashes, no rushing)",
+    },
+    {
+      icon: ShieldQuestionMark,
+      text: "From horse riding and hot-air balloon rides\n to quad/buggy adventures (and more), every moment is planned with intention so you can enjoy Morocco with peace of mind.",
     },
   ];
 
@@ -107,7 +111,7 @@ function Services() {
     },
     {
       icon: ShieldQuestionMark,
-      text: "Prayer-friendly timing — meals planned around your worship, not rushed schedules",
+      text: "Prayer-friendly timing — meals planned around worship, not rushed schedules",
     },
   ];
 
@@ -139,7 +143,7 @@ function Services() {
             </div>
 
             {/* Main Heading */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight mb-4 sm:mb-6 leading-tight px-2">
+            <h2 className="text-xl sm:text-xl lg:text-2xl xl:text-3xl font-black tracking-tight mb-4 sm:mb-6 leading-tight px-2">
               <span className="text-white">
                 From Arrival to Return — Travel Without Worry
               </span>
@@ -157,8 +161,11 @@ function Services() {
             </span>
 
             <p className="text-sm sm:text-base text-left lg:text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
-              "Your movement matters. We ensure transportation that is:"
+              "Your movement matters."
             </p>
+            <span className="font-bold text-base text-left sm:text-lg lg:text-xl text-white mb-10 block px-2">
+              We ensure transportation that is :
+            </span>
 
             {/* Feature List */}
             <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 px-2">
@@ -256,7 +263,7 @@ function Services() {
 
       {/* Section 2: Activities */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 sm:mt-20 lg:mt-24">
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 sm:gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Left Content */}
           <motion.div
             className="flex-1 w-full max-w-md sm:max-w-lg lg:max-w-none order-2 lg:order-1"
@@ -387,14 +394,15 @@ function Services() {
             </span>
 
             <p className="text-sm sm:text-base text-left lg:text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
-              "At Abu Retreats, activities are not rushed checklists or tourist
-              traps designed to move you quickly from one stop to the next. We
-              don't believe in overcrowded schedules, forced stops, or
-              experiences that feel disconnected from who you are and what you
-              value. Instead, every activity is a guided experience, carefully
-              planned with intention and care."
+              "At Abu Retreats, activities aren’t rushed checklists or tourist
+              traps. We design guided experiences that feel calm, meaningful,
+              and aligned with your values no overcrowded schedules, no forced
+              stops, no pressure."
             </p>
 
+            <span className="font-bold text-base sm:text-lg lg:text-xl mb-10 text-[#ffffff] block  px-2">
+              We handle everything for you:
+            </span>
             {/* Feature List */}
             <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 px-2">
               {features2.map((feature, index) => (
@@ -439,12 +447,10 @@ function Services() {
             </span>
 
             <p className="text-sm text-left sm:text-base lg:text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
-              "Food is not a detail. For Muslims, it is a responsibility, an act
-              of care, and a matter of trust. At Abu Retreats, we understand
-              that eating halal is not about labels or assumptions — it's about
-              certainty. That's why every meal is selected with intention,
-              verification, and sincerity. No guessing. No discomfort. No
-              awkward questions."
+              "Food isn’t a small detail. For Muslims, it’s trust. At Abu
+              Retreats, halal isn’t based on labels or assumptions it’s based on
+              certainty. Every meal is chosen with care and verified, so you
+              never have to guess, feel uncomfortable, or ask awkward questions"
             </p>
 
             {/* Feature List */}
