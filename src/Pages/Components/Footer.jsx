@@ -118,14 +118,14 @@ function Footer() {
               <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-[#CFA80F] rounded-full"></span>
             </h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-gray-200 text-sm group">
+              {/* <li className="flex items-start gap-3 text-gray-200 text-sm group">
                 <MapPin className="w-5 h-5 text-[#CFA80F] shrink-0 mt-0.5 group-hover:text-[#CFA80F] transition-colors" />
                 <span className="group-hover:text-white transition-colors">
                   Randome Adresse
                   <br />
                   Casablanca, 2000
                 </span>
-              </li>
+              </li> */}
               <li className="flex items-center gap-3 text-gray-200 text-sm group">
                 <Phone className="w-5 h-5 text-[#CFA80F] shrink-0 group-hover:text-[#CFA80F] transition-colors" />
                 <a
@@ -147,7 +147,7 @@ function Footer() {
             </ul>
 
             {/* Social Media */}
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <h4 className="font-bold text-sm mb-3 text-[#CFA80F]">
                 Follow Us
               </h4>
@@ -173,7 +173,7 @@ function Footer() {
                   </a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
