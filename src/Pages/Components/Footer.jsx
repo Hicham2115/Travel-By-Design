@@ -135,7 +135,7 @@ function Footer() {
                   +212 647-255163
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-gray-200 text-sm group">
+              {/* <li className="flex items-center gap-3 text-gray-200 text-sm group">
                 <Mail className="w-5 h-5 text-[#CFA80F] shrink-0 group-hover:text-[#CFA80F] transition-colors" />
                 <a
                   href="mailto:hello@yourbrand.com"
@@ -143,7 +143,7 @@ function Footer() {
                 >
                   travelbydesign@gmail.com
                 </a>
-              </li>
+              </li> */}
             </ul>
 
             {/* Social Media */}
