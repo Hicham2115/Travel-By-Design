@@ -157,7 +157,8 @@ function Services() {
             </p>
 
             <span className="font-bold text-base text-left sm:text-lg lg:text-xl text-[#e7c129] block mb-2 px-2">
-              🚐 Transportation — Safe, Reliable, Respectful{" "}
+               Transportation  Safe, Reliable, Respectful
+
             </span>
 
             <p className="text-sm sm:text-base text-left lg:text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
@@ -390,7 +391,8 @@ function Services() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="font-bold text-base sm:text-lg lg:text-xl text-[#e7c129] block mb-2 sm:mb-3 px-2">
-              🧭 Guided Experiences & Activities{" "}
+              Guided Experiences & Activities
+
             </span>
 
             <p className="text-sm sm:text-base text-left lg:text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
@@ -443,7 +445,8 @@ function Services() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="font-bold text-base sm:text-lg lg:text-xl text-[#e7c129] block mb-2 sm:mb-3 px-2">
-              🍽️ Food — Halal Without Doubt{" "}
+             Food  Halal Without Doubt
+
             </span>
 
             <p className="text-sm text-left sm:text-base lg:text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
