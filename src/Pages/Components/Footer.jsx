@@ -24,9 +24,12 @@ function Footer() {
   ];
 
   const services = [
-    { name: "Marketing", href: "/lead-generation" },
-    { name: "Development", href: "/development" },
-    { name: "Consulting", href: "/lead-generation" },
+    { name: "Horse Riding", href: "/lead-generation" },
+    { name: "Hot Air Ballooning", href: "/development" },
+    { name: "Quad Biking", href: "/lead-generation" },
+    { name: "Desert Exploration", href: "/lead-generation" },
+    { name: "Wellness Retreat", href: "/lead-generation" },
+    { name: "Cultural Exchange", href: "/lead-generation" },
   ];
 
   return (
@@ -93,14 +96,14 @@ function Footer() {
           {/* Services */}
           <div>
             <h3 className="font-black text-lg mb-6 text-white relative inline-block">
-              Our Services
+              Our Activities
               <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-[#CFA80F] rounded-full"></span>
             </h3>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
                   <a
-                    href={service.href}
+                    // href={service.href}
                     className="text-gray-200 hover:text-[#CFA80F] transition-all duration-300 flex items-center group text-sm"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-[#CFA80F] mr-0 group-hover:mr-2 transition-all duration-300 rounded-full"></span>

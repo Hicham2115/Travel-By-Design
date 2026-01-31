@@ -35,6 +35,22 @@ export default function App() {
     setIsLoading(false);
   };
 
+  // Pause animations when page is hidden
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        document.body.classList.add("page-hidden");
+      } else {
+        document.body.classList.remove("page-hidden");
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
+
   return (
     <>
       <BookCallPopup />

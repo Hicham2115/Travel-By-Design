@@ -136,4 +136,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Pause all animations when page is hidden to prevent background lag */
+  :root:has(~ body[aria-hidden="true"]) *,
+  body.page-hidden * {
+    animation-play-state: paused !important;
+  }
 }

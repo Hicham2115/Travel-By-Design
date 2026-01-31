@@ -5,11 +5,15 @@ const CursorFollower = () => {
   const [isVisible, setIsVisible] = useState(false);
   const rafRef = useRef(null);
   const mousePos = useRef({ x: 0, y: 0 });
+  const isPageVisibleRef = useRef(true);
 
   useEffect(() => {
     let animationFrameId;
 
     const updatePosition = (e) => {
+      // Only update if page is visible
+      if (!isPageVisibleRef.current) return;
+
       mousePos.current = { x: e.clientX, y: e.clientY };
       if (!isVisible) setIsVisible(true);
 
@@ -28,12 +32,26 @@ const CursorFollower = () => {
       setIsVisible(false);
     };
 
+    // Handle visibility change
+    const handleVisibilityChange = () => {
+      isPageVisibleRef.current = !document.hidden;
+      if (document.hidden) {
+        // Pause animations when tab loses focus
+        setIsVisible(false);
+        if (rafRef.current) {
+          cancelAnimationFrame(rafRef.current);
+        }
+      }
+    };
+
     window.addEventListener("mousemove", updatePosition, { passive: true });
     document.addEventListener("mouseleave", handleMouseLeave);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
       window.removeEventListener("mousemove", updatePosition);
       document.removeEventListener("mouseleave", handleMouseLeave);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current);
       }
@@ -72,7 +90,9 @@ const CursorFollower = () => {
           pointer-events: none;
           z-index: 9999;
           transform: translate(-50%, -50%);
-          transition: opacity 0.3s ease, transform 0.15s ease;
+          transition:
+            opacity 0.3s ease,
+            transform 0.15s ease;
           box-shadow: 0 0 15px rgba(232, 193, 39, 0.6);
         }
 
@@ -85,7 +105,10 @@ const CursorFollower = () => {
           pointer-events: none;
           z-index: 9998;
           transform: translate(-50%, -50%);
-          transition: opacity 0.3s ease, transform 0.4s ease, width 0.3s ease,
+          transition:
+            opacity 0.3s ease,
+            transform 0.4s ease,
+            width 0.3s ease,
             height 0.3s ease;
         }
 
