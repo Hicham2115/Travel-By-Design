@@ -31,7 +31,7 @@ function Hero() {
             Halal Journeys in Morocco
           </span>
           <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#e8c127] via-[#e8c127] to-[#e8c127] mt-2 animate-gradient bg-[length:200%_auto]">
-            Abu Retreats
+            Travel By Design
           </span>
         </motion.h1>
 
@@ -163,7 +163,7 @@ function Hero() {
         </motion.div>
 
         {/* Arabic Text and Arrow */}
-        <motion.div
+        {/* <motion.div
           className="flex flex-col gap-8 mt-8 justify-center items-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -180,10 +180,9 @@ function Hero() {
               ease: "easeInOut",
             }}
           >
-            <img src={ArrowDown} alt="" width={40} />
-            {/* <ArrowDown className="scale-140 text-white" /> */}
+            <img src={ArrowDownUp} alt="" width={40} />
           </motion.span>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

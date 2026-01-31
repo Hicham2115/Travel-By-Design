@@ -22,9 +22,9 @@ function Bridge() {
           </h2>
 
           <p className="text-base sm:text-lg lg:text-xl text-white max-w-2xl mx-auto lg:mx-0 leading-relaxed px-2">
-            Abu Retreats was created to serve Muslims who care about their faith
-            while traveling. Not as tourists to be exploited, but as honored
-            guests.
+            Travel By Design was created to serve Muslims who care about their
+            faith while traveling. Not as tourists to be exploited, but as
+            honored guests.
           </p>
         </motion.div>
 

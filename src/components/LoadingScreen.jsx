@@ -237,7 +237,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
               className="text-center"
             >
               <h1 className="text-4xl md:text-5xl font-black text-white mb-2">
-                Abu Retreats
+                Travel By Design
               </h1>
               <p className="text-[#d4af37] text-lg md:text-xl font-semibold">
                 Halal Journeys in Morocco

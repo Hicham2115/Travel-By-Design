@@ -53,6 +53,10 @@ import food3 from "../../assets/Food/Screenshot (24).png";
 import food4 from "../../assets/Food/Screenshot (25).png";
 import food5 from "../../assets/Food/Screenshot (27).png";
 
+import ArrowDownUp from "../../assets/fleche-vers-le-bas.png";
+import arrowRight from "../../assets/arrowRight.png";
+import flip from "../../assets/flip.png";
+
 function Services() {
   const features = [
     {
@@ -151,14 +155,13 @@ function Services() {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
-              When you travel with Abu Retreats, you are never left to figure
-              things out alone. We handle every essential detail so you can
-              focus on your journey, your faith, and your peace.
+              When you travel with Travel By Design, you are never left to
+              figure things out alone. We handle every essential detail so you
+              can focus on your journey, your faith, and your peace.
             </p>
 
             <span className="font-bold text-base text-left sm:text-lg lg:text-xl text-[#e7c129] block mb-2 px-2">
-               Transportation  Safe, Reliable, Respectful
-
+              Transportation Safe, Reliable, Respectful
             </span>
 
             <p className="text-sm sm:text-base text-left lg:text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
@@ -202,61 +205,78 @@ function Services() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <div className="relative w-full h-[280px] sm:h-[350px] lg:h-[400px] rounded-2xl overflow-hidden">
-              <Swiper
-                direction={"vertical"}
-                slidesPerView={1}
-                spaceBetween={30}
-                mousewheel={true}
-                pagination={{
-                  clickable: true,
+            <div className="flex gap-2">
+              <div className="relative w-full h-[280px] sm:h-[350px] lg:h-[400px] rounded-2xl overflow-hidden">
+                <Swiper
+                  direction={"vertical"}
+                  slidesPerView={1}
+                  spaceBetween={30}
+                  mousewheel={true}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Mousewheel, Pagination]}
+                  className="mySwiper w-full h-full"
+                >
+                  <SwiperSlide>
+                    <img
+                      src={transport1}
+                      alt="Transportation"
+                      className="w-full h-full object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={transport2}
+                      alt="Transportation"
+                      className="w-full h-full object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={transport3}
+                      alt="Transportation"
+                      className="w-full h-full object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={transport4}
+                      alt="Transportation"
+                      className="w-full h-full object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={transport5}
+                      alt="Transportation"
+                      className="w-full h-full object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={transport6}
+                      alt="Transportation"
+                      className="w-full h-full object-cover"
+                    />
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+              <motion.span
+                animate={{ y: [0, 10, 0] }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  ease: "easeInOut",
                 }}
-                modules={[Mousewheel, Pagination]}
-                className="mySwiper w-full h-full"
               >
-                <SwiperSlide>
-                  <img
-                    src={transport1}
-                    alt="Transportation"
-                    className="w-full h-full object-cover"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={transport2}
-                    alt="Transportation"
-                    className="w-full h-full object-cover"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={transport3}
-                    alt="Transportation"
-                    className="w-full h-full object-cover"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={transport4}
-                    alt="Transportation"
-                    className="w-full h-full object-cover"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={transport5}
-                    alt="Transportation"
-                    className="w-full h-full object-cover"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={transport6}
-                    alt="Transportation"
-                    className="w-full h-full object-cover"
-                  />
-                </SwiperSlide>
-              </Swiper>
+                <span className="flex items-center flex-col gap-14 justify-center h-full">
+                  <img src={ArrowDownUp} alt="" width={30} />
+                  <p className="text-xs text-center rotate-90 whitespace-nowrap font-bold text-[#e7c129]">
+                    Swipe Down
+                  </p>
+                </span>
+              </motion.span>
             </div>
           </motion.div>
         </div>
@@ -273,7 +293,7 @@ function Services() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <div className="relative w-full rounded-2xl overflow-hidden">
+            <div className="relative flex flex-col gap-6 w-full rounded-2xl overflow-hidden">
               <Swiper
                 effect={"cube"}
                 grabCursor={true}
@@ -379,6 +399,21 @@ function Services() {
                   />
                 </SwiperSlide>
               </Swiper>
+              <motion.span
+                animate={{ x: [0, 10, 0] }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <span className="flex items-center gap-2 justify-center h-full">
+                  <p className="text-xs text-center whitespace-nowrap font-bold text-[#e7c129]">
+                    Swipe Right
+                  </p>
+                  <img src={arrowRight} alt="" width={10} />
+                </span>
+              </motion.span>
             </div>
           </motion.div>
 
@@ -392,14 +427,13 @@ function Services() {
           >
             <span className="font-bold text-base sm:text-lg lg:text-xl text-[#e7c129] block mb-2 sm:mb-3 px-2">
               Guided Experiences & Activities
-
             </span>
 
             <p className="text-sm sm:text-base text-left lg:text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
-              "At Abu Retreats, activities aren’t rushed checklists or tourist
-              traps. We design guided experiences that feel calm, meaningful,
-              and aligned with your values no overcrowded schedules, no forced
-              stops, no pressure."
+              "At Travel By Design, activities aren’t rushed checklists or
+              tourist traps. We design guided experiences that feel calm,
+              meaningful, and aligned with your values no overcrowded schedules,
+              no forced stops, no pressure."
             </p>
 
             <span className="font-bold text-base sm:text-lg lg:text-xl mb-10 text-[#ffffff] block  px-2">
@@ -445,15 +479,16 @@ function Services() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="font-bold text-base sm:text-lg lg:text-xl text-[#e7c129] block mb-2 sm:mb-3 px-2">
-             Food  Halal Without Doubt
-
+              Food Halal Without Doubt
             </span>
 
             <p className="text-sm text-left sm:text-base lg:text-lg italic text-white leading-relaxed max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-6 px-2">
-              "Food isn’t a small detail. For Muslims, it’s trust. At Abu
-              Retreats, halal isn’t based on labels or assumptions it’s based on
-              certainty. Every meal is chosen with care and verified, so you
-              never have to guess, feel uncomfortable, or ask awkward questions"
+              "Food isn’t a small detail. For Muslims, it’s trust. At Travel By
+              Design, halal food is the default—never an assumption. Every meal
+              is carefully selected and verified, prepared to be both delicious
+              and reassuring. Dietary needs and allergies are always taken into
+              consideration, so you never have to guess, feel uncomfortable, or
+              ask awkward questions."
             </p>
 
             {/* Feature List */}
@@ -490,7 +525,7 @@ function Services() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <div className="relative w-full rounded-2xl overflow-hidden">
+            <div className="relative flex flex-col gap-6 w-full rounded-2xl overflow-hidden">
               <Swiper
                 effect={"cards"}
                 grabCursor={true}
@@ -534,6 +569,21 @@ function Services() {
                   />
                 </SwiperSlide>
               </Swiper>
+              <motion.span
+                animate={{ scale: [1, 1.08, 1] }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <span className="flex items-center gap-2 justify-center h-full">
+                  <p className="text-xs text-center whitespace-nowrap font-bold text-[#e7c129]">
+                    Flip
+                  </p>
+                  <img src={flip} alt="" width={10} />
+                </span>
+              </motion.span>
             </div>
           </motion.div>
         </div>

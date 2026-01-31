@@ -18,14 +18,15 @@ function Message() {
         {/* Content */}
         <div className="flex flex-col justify-center items-center gap-4 sm:gap-5 lg:gap-4">
           <p className="text-sm sm:text-base md:text-lg lg:text-md text-gray-200 max-w-2xl text-center leading-relaxed px-2">
-            I didn't choose this mission because it's easy. I chose it because
-            it's needed.
+            I didn’t choose this mission because it’s easy. I chose it because
+            it’s needed.
           </p>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-md text-gray-200 max-w-2xl text-center leading-relaxed px-2">
-            After hosting Muslims — families, individuals, retreats — and seeing
-            their peace when they could pray without searching, eat without
-            worry, and travel without compromise…
+            After hosting Muslim families, individuals, and retreats—and
+            witnessing their peace when prayer was already part of the
+            experience, when they could eat without worry and travel without
+            compromise…
           </p>
 
           <span className="text-[#CFA80F] font-bold text-base sm:text-lg md:text-xl">
@@ -33,7 +34,7 @@ function Message() {
           </span>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-md text-gray-200 max-w-2xl text-center leading-relaxed px-2">
-            I'm tired of seeing my brothers and sisters overcharged and
+            I’ve seen too many of my brothers and sisters overcharged and
             betrayed. So I decided to act.
           </p>
 
@@ -50,7 +51,7 @@ function Message() {
               With respect and du'a,
             </p>
             <p className="font-serif text-base sm:text-lg md:text-xl text-[#CFA80F] font-semibold">
-              The Abu Retreats Team
+              The Travel By Design Team
             </p>
           </div>
         </div>

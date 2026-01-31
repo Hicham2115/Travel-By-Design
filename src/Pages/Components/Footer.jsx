@@ -147,19 +147,19 @@ function Footer() {
             </ul>
 
             {/* Social Media */}
-            {/* <div className="mt-6">
+            <div className="mt-6">
               <h4 className="font-bold text-sm mb-3 text-[#CFA80F]">
                 Follow Us
               </h4>
               <div className="flex gap-3">
                 {[
-                  { icon: Facebook, href: "#", label: "Facebook" },
+                  // { icon: Facebook, href: "#", label: "Facebook" },
                   {
                     icon: Instagram,
-                    href: "https://www.instagram.com/stallion_advertising/",
+                    href: "https://www.instagram.com/aburetreats/",
                     label: "Instagram",
                   },
-                  { icon: Linkedin, href: "#", label: "LinkedIn" },
+                  // { icon: Linkedin, href: "#", label: "LinkedIn" },
                 ].map((social, index) => (
                   <a
                     key={index}
@@ -173,7 +173,7 @@ function Footer() {
                   </a>
                 ))}
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
 
