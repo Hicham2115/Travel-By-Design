@@ -1,21 +1,23 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, memo } from "react";
 
-const CursorFollower = () => {
+const CursorFollower = memo(() => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
   const rafRef = useRef(null);
   const mousePos = useRef({ x: 0, y: 0 });
   const isPageVisibleRef = useRef(true);
+  const isVisibleRef = useRef(false);
 
   useEffect(() => {
-    let animationFrameId;
-
     const updatePosition = (e) => {
       // Only update if page is visible
       if (!isPageVisibleRef.current) return;
 
       mousePos.current = { x: e.clientX, y: e.clientY };
-      if (!isVisible) setIsVisible(true);
+      if (!isVisibleRef.current) {
+        isVisibleRef.current = true;
+        setIsVisible(true);
+      }
 
       // Cancel previous frame if it exists
       if (rafRef.current) {
@@ -29,6 +31,7 @@ const CursorFollower = () => {
     };
 
     const handleMouseLeave = () => {
+      isVisibleRef.current = false;
       setIsVisible(false);
     };
 
@@ -37,6 +40,7 @@ const CursorFollower = () => {
       isPageVisibleRef.current = !document.hidden;
       if (document.hidden) {
         // Pause animations when tab loses focus
+        isVisibleRef.current = false;
         setIsVisible(false);
         if (rafRef.current) {
           cancelAnimationFrame(rafRef.current);
@@ -56,7 +60,7 @@ const CursorFollower = () => {
         cancelAnimationFrame(rafRef.current);
       }
     };
-  }, [isVisible]);
+  }, []);
 
   return (
     <>
@@ -94,6 +98,7 @@ const CursorFollower = () => {
             opacity 0.3s ease,
             transform 0.15s ease;
           box-shadow: 0 0 15px rgba(232, 193, 39, 0.6);
+          will-change: transform;
         }
 
         .cursor-follower-trail {
@@ -110,6 +115,7 @@ const CursorFollower = () => {
             transform 0.4s ease,
             width 0.3s ease,
             height 0.3s ease;
+          will-change: transform;
         }
 
         .cursor-follower:hover {
@@ -125,6 +131,8 @@ const CursorFollower = () => {
       `}</style>
     </>
   );
-};
+});
+
+CursorFollower.displayName = "CursorFollower";
 
 export default CursorFollower;

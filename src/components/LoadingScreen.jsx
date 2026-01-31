@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const LoadingScreen = ({ onLoadingComplete }) => {
   const [progress, setProgress] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
-
   const [isLoaded, setIsLoaded] = useState(false);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
     const handleLoad = () => setIsLoaded(true);
@@ -17,17 +17,21 @@ const LoadingScreen = ({ onLoadingComplete }) => {
     }
   }, []);
 
+  const completeLoading = useCallback(() => {
+    setIsComplete(true);
+    setTimeout(() => {
+      onLoadingComplete();
+    }, 1000);
+  }, [onLoadingComplete]);
+
   useEffect(() => {
     // Fast loading progress - completes in ~1-1.5 seconds
-    const interval = setInterval(() => {
+    intervalRef.current = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          clearInterval(interval);
+          if (intervalRef.current) clearInterval(intervalRef.current);
           setTimeout(() => {
-            setIsComplete(true);
-            setTimeout(() => {
-              onLoadingComplete();
-            }, 1000); // 1s delay to allow exit animation (0.8s) to finish smoothly
+            completeLoading();
           }, 200);
           return 100;
         }
@@ -43,8 +47,10 @@ const LoadingScreen = ({ onLoadingComplete }) => {
       });
     }, 100);
 
-    return () => clearInterval(interval);
-  }, [onLoadingComplete, isLoaded]);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [isLoaded, completeLoading]);
 
   return (
     <AnimatePresence>

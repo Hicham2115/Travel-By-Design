@@ -6,11 +6,19 @@ const Background = React.memo(() => {
       {/* Gradient overlays for depth */}
       <div className="absolute inset-0 bg-linear-to-tr from-[#083d30]/50 via-transparent to-[#0f6b52]/30"></div>
 
-      {/* Glowing orbs */}
-      <div className="absolute top-20 right-32 w-96 h-96 bg-[#d4af37]/20 rounded-full blur-3xl animate-pulse"></div>
+      {/* Glowing orbs - using CSS animation instead of animate-pulse for better performance */}
       <div
-        className="absolute bottom-32 left-20 w-[500px] h-[500px] bg-[#c9a961]/18 rounded-full blur-3xl animate-pulse"
-        style={{ animationDelay: "1.5s" }}
+        className="absolute top-20 right-32 w-96 h-96 bg-[#d4af37]/20 rounded-full blur-3xl"
+        style={{
+          animation: "glow 4s ease-in-out infinite",
+        }}
+      ></div>
+      <div
+        className="absolute bottom-32 left-20 w-[500px] h-[500px] bg-[#c9a961]/18 rounded-full blur-3xl"
+        style={{
+          animation: "glow 4s ease-in-out infinite",
+          animationDelay: "1.5s",
+        }}
       ></div>
 
       {/* Islamic Hexagonal Tile Pattern (Zellige inspired) */}

@@ -10,6 +10,16 @@
   }
 }
 
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
 .animate-spin-slow {
   animation: spin 3s linear infinite;
 }
@@ -141,5 +151,33 @@
   :root:has(~ body[aria-hidden="true"]) *,
   body.page-hidden * {
     animation-play-state: paused !important;
+  }
+
+  /* Performance optimizations */
+  img {
+    display: block;
+  }
+
+  /* Enable GPU acceleration for smooth animations */
+  .cursor-follower,
+  .cursor-follower-trail {
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Optimize motion animations */
+  [data-motion] {
+    will-change: transform, opacity;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }

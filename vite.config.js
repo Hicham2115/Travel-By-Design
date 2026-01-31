@@ -11,4 +11,34 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Optimize chunk splitting for better caching
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom", "react-router-dom"],
+          framer: ["framer-motion"],
+          ui: [
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-slot",
+            "lucide-react",
+          ],
+          swiper: ["swiper"],
+        },
+      },
+    },
+    // Reduce chunk size warning threshold
+    chunkSizeWarningLimit: 1000,
+    // Enable compression
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
+  },
+  server: {
+    // Enable compression in dev
+    middlewareMode: false,
+  },
 });
