@@ -9,6 +9,7 @@ import Message from "./Components/Message";
 import OurLanguages from "./Components/OurLanguages";
 import Contact from "./Components/Contact";
 import Services from "./Components/Services";
+import Testimonials from "./Components/Testimonials";
 function Home() {
   return (
     <div>
@@ -30,6 +31,9 @@ function Home() {
       </section>
       <section id="activities">
         <Activities />
+      </section>
+      <section id="testimonials" className="mt-20">
+        <Testimonials />
       </section>
       <Message />
       {/* <OurLanguages /> */}
