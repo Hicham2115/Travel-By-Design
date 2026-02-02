@@ -8,12 +8,9 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 
 // Import all testimonial videos
-import AbdoulFirst from "../../assets/Testimonials TBD/Abdoul Hakeem/FIRST.mov";
-import AbdoulSecond from "../../assets/Testimonials TBD/Abdoul Hakeem/SECOND.mov";
+import AbdoulFirst from "../../assets/Testimonials TBD/Abdoul Hakeem/FIRST 1_1.mp4";
 import AliVideo from "../../assets/Testimonials TBD/ali.paidads/768f7754eb9c43bd904edebe88e9cf58.mov";
-import AmanFirst from "../../assets/Testimonials TBD/Aman (The Muslim sales guy)/FIRST 1.mov";
-import AmanSecond from "../../assets/Testimonials TBD/Aman (The Muslim sales guy)/SECOND 2.mov";
-import AmanThird from "../../assets/Testimonials TBD/Aman (The Muslim sales guy)/THIRD 3.mov";
+import AmanFirst from "../../assets/Testimonials TBD/Aman (The Muslim sales guy)/FIRST 1.mp4";
 import AmmarVideo from "../../assets/Testimonials TBD/Ammar/d65802c34bff45d2b65dd7db3a4f2d9a.mov";
 import MohammedVideo from "../../assets/Testimonials TBD/Mohammed/a5f1c9a3f68c49f2b2428e929b44e043.mov";
 import MutasimVideo from "../../assets/Testimonials TBD/Mutasim Sultan/6a5fc45b1dad4ad391ed9906f597c5e7.mov";
@@ -23,11 +20,8 @@ import ShamsVideo from "../../assets/Testimonials TBD/Shams _ Videographer/8effb
 
 const testimonialVideos = [
   { name: "Abdoul Hakeem", video: AbdoulFirst, index: 1 },
-  { name: "Abdoul Hakeem", video: AbdoulSecond, index: 2 },
   { name: "Ali Paidads", video: AliVideo, index: 1 },
   { name: "Aman", video: AmanFirst, index: 1 },
-  { name: "Aman", video: AmanSecond, index: 2 },
-  { name: "Aman", video: AmanThird, index: 3 },
   { name: "Ammar", video: AmmarVideo, index: 1 },
   { name: "Mohammed", video: MohammedVideo, index: 1 },
   { name: "Mutasim Sultan", video: MutasimVideo, index: 1 },

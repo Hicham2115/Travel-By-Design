@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Background from "./Pages/Components/Background.jsx";
-import { useEffect, useState, lazy, Suspense } from "react";
+import { useEffect, useState, Suspense } from "react";
 import NavBar from "./Pages/Components/NavBar.jsx";
 import Footer from "./Pages/Components/Footer";
 import CursorFollower from "./components/CursorFollower.jsx";
@@ -8,9 +8,9 @@ import ScrollToTopButton from "./components/ScrollToTopButton.jsx";
 import WhatsAppButton from "./components/WhatsAppButton.jsx";
 import LoadingScreen from "./components/LoadingScreen.jsx";
 import BookCallPopup from "./Pages/Components/BookCallPopup.jsx";
+import Home from "./Pages/Home.jsx";
 
-// Lazy load the Home component for better performance
-const Home = lazy(() => import("./Pages/Home.jsx"));
+// const Home = lazy(() => import("./Pages/Home.jsx")); // commented per request
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -56,8 +56,8 @@ export default function App() {
       <BookCallPopup />
 
       <CursorFollower />
-      {/* <ScrollToTopButton /> */}
       <WhatsAppButton />
+      <ScrollToTopButton />
       <Background />
       <NavBar />
       <ScrollToTop />
