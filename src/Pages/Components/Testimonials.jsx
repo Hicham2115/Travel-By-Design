@@ -25,15 +25,15 @@ const testimonialVideos = [
   { name: "Abdoul Hakeem", video: AbdoulFirst, index: 1 },
   { name: "Abdoul Hakeem", video: AbdoulSecond, index: 2 },
   { name: "Ali Paidads", video: AliVideo, index: 1 },
-  { name: "Aman (The Muslim sales guy)", video: AmanFirst, index: 1 },
-  { name: "Aman (The Muslim sales guy)", video: AmanSecond, index: 2 },
-  { name: "Aman (The Muslim sales guy)", video: AmanThird, index: 3 },
+  { name: "Aman", video: AmanFirst, index: 1 },
+  { name: "Aman", video: AmanSecond, index: 2 },
+  { name: "Aman", video: AmanThird, index: 3 },
   { name: "Ammar", video: AmmarVideo, index: 1 },
   { name: "Mohammed", video: MohammedVideo, index: 1 },
   { name: "Mutasim Sultan", video: MutasimVideo, index: 1 },
   { name: "Omar Varlet", video: OmarVideo, index: 1 },
   { name: "Oussama", video: OussmaVideo, index: 1 },
-  { name: "Shams (Videographer)", video: ShamsVideo, index: 1 },
+  { name: "Shams", video: ShamsVideo, index: 1 },
 ];
 
 function Testimonials() {
