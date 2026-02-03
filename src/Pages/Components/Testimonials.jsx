@@ -72,11 +72,11 @@ function Testimonials() {
           <h2 className="text-sm font-bold text-[#CFA80F] tracking-wider uppercase mb-4">
             What Our Guests Say
           </h2>
-          <p className="text-xl sm:text-3xl lg:text-3xl font-bold text-white mb-6">
+          <p className="text-md sm:text-xl lg:text-2xl font-bold text-white mb-6">
             Real Stories from{" "}
             <span className="text-[#CFA80F]">Real Travelers</span>
           </p>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+          <p className="text-white text-base sm:text-lg mt-4 mx-auto w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl px-4 sm:px-0 text-center wrap-break-word whitespace-normal">
             Experience the joy and wonder through the eyes of our guests who
             have embarked on unforgettable journeys with Travel By Design
           </p>
