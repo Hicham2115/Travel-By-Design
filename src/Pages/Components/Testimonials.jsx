@@ -31,17 +31,10 @@ const testimonialVideos = [
 ];
 
 function Testimonials() {
-  const prevRef = React.useRef(null);
-  const nextRef = React.useRef(null);
   const [swiperInstance, setSwiperInstance] = React.useState(null);
 
   React.useEffect(() => {
     if (swiperInstance) {
-      swiperInstance.params.navigation.prevEl = prevRef.current;
-      swiperInstance.params.navigation.nextEl = nextRef.current;
-      swiperInstance.navigation.init();
-      swiperInstance.navigation.update();
-
       // Stop video when slide changes
       const handleSlideChange = () => {
         const videos = document.querySelectorAll("video");
@@ -90,18 +83,20 @@ function Testimonials() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          <div className="relative rounded-3xl overflow-visible px-16 w-[50%] mx-auto pb-12">
+          <div
+            className="relative rounded-3xl overflow-visible 
+              w-full sm:w-[80%] lg:w-[50%] 
+              px-4 sm:px-8 lg:px-16 
+              mx-auto pb-12"
+          >
             <Swiper
-              modules={[Navigation, Pagination]}
+              modules={[Pagination]}
               onSwiper={setSwiperInstance}
-              navigation={{
-                prevEl: prevRef.current,
-                nextEl: nextRef.current,
+              pagination={{
+                clickable: true,
+                dynamicBullets: true,
               }}
-              //   pagination={{
-              //     clickable: true,
-              //     dynamicBullets: true,
-              //   }}
+              touchStartPreventDefault={false}
               spaceBetween={0}
               slidesPerView={1}
               className="py-8"
@@ -109,7 +104,7 @@ function Testimonials() {
               {testimonialVideos.map((testimonial, index) => (
                 <SwiperSlide
                   key={index}
-                  className="flex items-center justify-center !bg-transparent"
+                  className="flex items-center justify-center bg-transparent!"
                 >
                   <div className="w-full max-w-full flex flex-col items-center justify-center relative bg-transparent gap-4 overflow-hidden">
                     <video
@@ -128,30 +123,56 @@ function Testimonials() {
               ))}
             </Swiper>
 
+            {/* Desktop/tablet arrows aligned with the video */}
             <button
-              ref={prevRef}
-              className="swiper-prev-btn cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 translate-x-20 z-10 
+              className="hidden sm:flex swiper-prev-btn cursor-pointer absolute left-2 lg:left-6 top-1/2 -translate-y-1/2 z-20 
                 bg-[#CFA80F] hover:bg-[#e8c127] text-black p-3 rounded-full 
                 transition-all duration-300 transform hover:scale-110 shadow-lg"
               aria-label="Previous testimonial"
+              onClick={() => swiperInstance && swiperInstance.slidePrev()}
+              disabled={!swiperInstance}
             >
               <ChevronLeft size={28} />
             </button>
 
             <button
-              ref={nextRef}
-              className="swiper-next-btn absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 -translate-x-20 z-10 
+              className="hidden sm:flex swiper-next-btn cursor-pointer absolute right-2 lg:right-6 top-1/2 -translate-y-1/2 z-20 
                 bg-[#CFA80F] hover:bg-[#e8c127] text-black p-3 rounded-full 
                 transition-all duration-300 transform hover:scale-110 shadow-lg"
               aria-label="Next testimonial"
+              onClick={() => swiperInstance && swiperInstance.slideNext()}
+              disabled={!swiperInstance}
             >
               <ChevronRight size={28} />
             </button>
+
+            {/* Mobile arrows under the video */}
+            <div className="flex sm:hidden items-center justify-center gap-4 mt-4">
+              <button
+                className="bg-[#CFA80F] hover:bg-[#e8c127] text-black p-2 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg"
+                aria-label="Previous testimonial"
+                onClick={() => swiperInstance && swiperInstance.slidePrev()}
+                disabled={!swiperInstance}
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                className="bg-[#CFA80F] hover:bg-[#e8c127] text-black p-2 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg"
+                aria-label="Next testimonial"
+                onClick={() => swiperInstance && swiperInstance.slideNext()}
+                disabled={!swiperInstance}
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>
 
       <style>{`
+        .testimonials .swiper {
+          height: auto !important;
+        }
         .testimonials .swiper-pagination {
           bottom: -24px !important;
           left: 50% !important;
