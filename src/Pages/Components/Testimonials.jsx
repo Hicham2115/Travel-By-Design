@@ -62,7 +62,7 @@ function Testimonials() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-sm font-bold text-[#CFA80F] tracking-wider uppercase mb-4">
-            What Our Guests Say
+            What Our Guests Say   
           </h2>
           <p className="text-md sm:text-xl lg:text-2xl font-bold text-white mb-6">
             Real Stories from{" "}
