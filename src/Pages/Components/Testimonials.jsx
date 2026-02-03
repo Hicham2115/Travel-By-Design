@@ -72,7 +72,7 @@ function Testimonials() {
           <h2 className="text-sm font-bold text-[#CFA80F] tracking-wider uppercase mb-4">
             What Our Guests Say
           </h2>
-          <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <p className="text-xl sm:text-3xl lg:text-3xl font-bold text-white mb-6">
             Real Stories from{" "}
             <span className="text-[#CFA80F]">Real Travelers</span>
           </p>
