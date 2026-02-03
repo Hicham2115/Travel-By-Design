@@ -75,7 +75,7 @@ function Testimonials() {
         </motion.div>
 
         {/* Testimonials Slider */}
-        {/* <motion.div
+        <motion.div
           className="relative flex justify-center"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -164,10 +164,10 @@ function Testimonials() {
               </button>
             </div>
           </div>
-        </motion.div> */}
+        </motion.div>
       </div>
 
-      {/* <style>{`
+      <style>{`
         .testimonials .swiper {
           height: auto !important;
         }
@@ -186,7 +186,7 @@ function Testimonials() {
         .testimonials .swiper-pagination-bullet-active {
           background-color: #CFA80F;
         }
-      `}</style> */}
+      `}</style>
     </div>
   );
 }
