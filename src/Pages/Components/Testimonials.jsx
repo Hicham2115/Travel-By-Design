@@ -58,8 +58,7 @@ function Testimonials() {
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-sm font-bold text-[#CFA80F] tracking-wider uppercase mb-4">
@@ -79,8 +78,7 @@ function Testimonials() {
         <motion.div
           className="relative flex justify-center"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           <div
@@ -89,39 +87,41 @@ function Testimonials() {
               px-4 sm:px-8 lg:px-16 
               mx-auto pb-12"
           >
-            <Swiper
-              modules={[Pagination]}
-              onSwiper={setSwiperInstance}
-              pagination={{
-                clickable: true,
-                dynamicBullets: true,
-              }}
-              touchStartPreventDefault={false}
-              spaceBetween={0}
-              slidesPerView={1}
-              className="py-8"
-            >
-              {testimonialVideos.map((testimonial, index) => (
-                <SwiperSlide
-                  key={index}
-                  className="flex items-center justify-center bg-transparent!"
-                >
-                  <div className="w-full max-w-full flex flex-col items-center justify-center relative bg-transparent gap-4 overflow-hidden">
-                    <video
-                      src={testimonial.video}
-                      controls
-                      controlsList="nodownload"
-                      className="w-fit h-auto max-h-[80vh] object-contain rounded-2xl border-2 border-[#CFA80F] border-opacity-20"
-                      playsInline
-                    ></video>
+            <div className="min-h-70">
+              <Swiper
+                modules={[Pagination]}
+                onSwiper={setSwiperInstance}
+                pagination={{
+                  clickable: true,
+                  dynamicBullets: true,
+                }}
+                touchStartPreventDefault={false}
+                spaceBetween={0}
+                slidesPerView={1}
+                className="py-8"
+              >
+                {testimonialVideos.map((testimonial, index) => (
+                  <SwiperSlide
+                    key={index}
+                    className="flex items-center justify-center bg-transparent!"
+                  >
+                    <div className="w-full max-w-full flex flex-col items-center justify-center relative bg-transparent gap-4 overflow-hidden">
+                      <video
+                        src={testimonial.video}
+                        controls
+                        controlsList="nodownload"
+                        className="w-fit h-auto max-h-[80vh] object-contain rounded-2xl border-2 border-[#CFA80F] border-opacity-20"
+                        playsInline
+                      ></video>
 
-                    <p className="text-[#CFA80F] font-bold text-xl tracking-widest uppercase mt-4 hover:text-[#e8c127] transition-colors duration-300">
-                      {testimonial.name}
-                    </p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                      <p className="text-[#CFA80F] font-bold text-xl tracking-widest uppercase mt-4 hover:text-[#e8c127] transition-colors duration-300">
+                        {testimonial.name}
+                      </p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
             {/* Desktop/tablet arrows aligned with the video */}
             <button
