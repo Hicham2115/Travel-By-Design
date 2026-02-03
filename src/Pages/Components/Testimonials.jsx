@@ -9,14 +9,14 @@ import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 
 // Import all testimonial videos
 import AbdoulFirst from "../../assets/Testimonials TBD/Abdoul Hakeem/FIRST 1_1.mp4";
-import AliVideo from "../../assets/Testimonials TBD/ali.paidads/768f7754eb9c43bd904edebe88e9cf58.mov";
+import AliVideo from "../../assets/Testimonials TBD/ali.paidads/768f7754eb9c43bd904edebe88e9cf58.mp4";
 import AmanFirst from "../../assets/Testimonials TBD/Aman (The Muslim sales guy)/FIRST 1.mp4";
-import AmmarVideo from "../../assets/Testimonials TBD/Ammar/d65802c34bff45d2b65dd7db3a4f2d9a.mov";
-import MohammedVideo from "../../assets/Testimonials TBD/Mohammed/a5f1c9a3f68c49f2b2428e929b44e043.mov";
-import MutasimVideo from "../../assets/Testimonials TBD/Mutasim Sultan/6a5fc45b1dad4ad391ed9906f597c5e7.mov";
-import OmarVideo from "../../assets/Testimonials TBD/Omar Varlet/064951e24f5249029798845f23493226.mov";
-import OussmaVideo from "../../assets/Testimonials TBD/Oussama/c2517c9755ca422c9a17af4d25853939.mov";
-import ShamsVideo from "../../assets/Testimonials TBD/Shams _ Videographer/8effb220b6f94be58f97eacaa927b0ec.mov";
+import AmmarVideo from "../../assets/Testimonials TBD/Ammar/d65802c34bff45d2b65dd7db3a4f2d9a.mp4";
+import MohammedVideo from "../../assets/Testimonials TBD/Mohammed/a5f1c9a3f68c49f2b2428e929b44e043.mp4";
+import MutasimVideo from "../../assets/Testimonials TBD/Mutasim Sultan/6a5fc45b1dad4ad391ed9906f597c5e7.mp4";
+import OmarVideo from "../../assets/Testimonials TBD/Omar Varlet/064951e24f5249029798845f23493226.mp4";
+import OussmaVideo from "../../assets/Testimonials TBD/Oussama/c2517c9755ca422c9a17af4d25853939.mp4";
+import ShamsVideo from "../../assets/Testimonials TBD/Shams _ Videographer/8effb220b6f94be58f97eacaa927b0ec.mp4";
 
 const testimonialVideos = [
   { name: "Abdoul Hakeem", video: AbdoulFirst, index: 1 },

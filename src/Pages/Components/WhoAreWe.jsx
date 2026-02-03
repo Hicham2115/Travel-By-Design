@@ -64,7 +64,7 @@ function WhoAreWe() {
 
             <h6 className="text-xl sm:text-xl lg:text-xl xl:text-xl font-black tracking-tight mb-4 sm:mb-6 leading-tight px-2">
               <span className="text-white">
-                Assalamu Alaykum I’m Ali (Travel By Design).
+                Assalamu Alaykum I’m Ali (Abu Retreats).
               </span>
             </h6>
 

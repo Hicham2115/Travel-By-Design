@@ -90,7 +90,7 @@ function Contact() {
             <span>Book Your Free Call</span>
           </button>
 
-          <p className="text-sm text-gray-400 mt-4 ">
+          <p className="text-sm text-gray-400 mt-4  text-center">
             ⏱️ Available slots filling fast · Select your preferred time
           </p>
         </div>
