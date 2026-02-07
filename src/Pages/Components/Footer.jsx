@@ -187,7 +187,7 @@ function Footer() {
               &copy; {currentYear} – Designed & developed by{" "}
               <a
                 className="underline"
-                href="https://stallionadvertising.ma/"
+                href="https://www.stallionadvertising.ma/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
