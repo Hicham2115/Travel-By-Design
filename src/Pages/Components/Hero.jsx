@@ -8,7 +8,6 @@ import {
   // ArrowDown,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import HeroPic from "../../assets/hero-morocco.jpg";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import ArrowDown from "../../assets/fleche-vers-le-bas.png";
@@ -28,7 +27,7 @@ function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="flex items-center justify-center gap-2 md:gap-3 flex-wrap">
-            Halal Journeys in Morocco With 
+            Halal Journeys in Morocco With
           </span>
           <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#e8c127] via-[#e8c127] to-[#e8c127] mt-2 animate-gradient bg-[length:200%_auto]">
             Abu Retreats
