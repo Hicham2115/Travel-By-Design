@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Import all testimonial videos
 import AbdoulFirst from "../../assets/Testimonials TBD/Abdoul Hakeem/FIRST 1_1.mp4";
@@ -32,6 +32,7 @@ const testimonialVideos = [
 
 function Testimonials() {
   const [swiperInstance, setSwiperInstance] = React.useState(null);
+  const [activeIndex, setActiveIndex] = React.useState(0);
 
   React.useEffect(() => {
     if (swiperInstance) {
@@ -62,7 +63,7 @@ function Testimonials() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-sm font-bold text-[#CFA80F] tracking-wider uppercase mb-4">
-            What Our Guests Say   
+            What Our Guests Say
           </h2>
           <p className="text-md sm:text-xl lg:text-2xl font-bold text-white mb-6">
             Real Stories from{" "}
@@ -90,7 +91,11 @@ function Testimonials() {
             <div className="min-h-70">
               <Swiper
                 modules={[Pagination]}
-                onSwiper={setSwiperInstance}
+                onSwiper={(swiper) => {
+                  setSwiperInstance(swiper);
+                  setActiveIndex(swiper?.activeIndex ?? 0);
+                }}
+                onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
                 pagination={{
                   clickable: true,
                   dynamicBullets: true,
@@ -107,11 +112,14 @@ function Testimonials() {
                   >
                     <div className="w-full max-w-full flex flex-col items-center justify-center relative bg-transparent gap-4 overflow-hidden">
                       <video
-                        src={testimonial.video}
+                        src={
+                          index === activeIndex ? testimonial.video : undefined
+                        }
                         controls
                         controlsList="nodownload"
                         className="w-fit h-auto max-h-[80vh] object-contain rounded-2xl border-2 border-[#CFA80F] border-opacity-20"
                         playsInline
+                        preload={index === activeIndex ? "metadata" : "none"}
                       ></video>
 
                       <p className="text-[#CFA80F] font-bold text-xl tracking-widest uppercase mt-4 hover:text-[#e8c127] transition-colors duration-300">

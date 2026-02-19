@@ -128,6 +128,8 @@ function WhoAreWe() {
                 <img
                   src={pic1}
                   alt="Strategic planning"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
@@ -138,6 +140,8 @@ function WhoAreWe() {
                 <img
                   src={pic3}
                   alt="Strategic planning"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
@@ -148,6 +152,8 @@ function WhoAreWe() {
                 <img
                   src={pic4}
                   alt="Expert execution"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
@@ -158,6 +164,8 @@ function WhoAreWe() {
                 <img
                   src={pic2}
                   alt="Strategic planning"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>

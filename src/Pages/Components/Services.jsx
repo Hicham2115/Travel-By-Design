@@ -222,6 +222,8 @@ function Services() {
                     <img
                       src={transport1}
                       alt="Transportation"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </SwiperSlide>
@@ -229,6 +231,8 @@ function Services() {
                     <img
                       src={transport2}
                       alt="Transportation"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </SwiperSlide>
@@ -236,6 +240,8 @@ function Services() {
                     <img
                       src={transport3}
                       alt="Transportation"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </SwiperSlide>
@@ -243,6 +249,8 @@ function Services() {
                     <img
                       src={transport4}
                       alt="Transportation"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </SwiperSlide>
@@ -250,6 +258,8 @@ function Services() {
                     <img
                       src={transport5}
                       alt="Transportation"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </SwiperSlide>
@@ -257,6 +267,8 @@ function Services() {
                     <img
                       src={transport6}
                       alt="Transportation"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </SwiperSlide>
@@ -271,7 +283,13 @@ function Services() {
                 }}
               >
                 <span className="flex items-center flex-col gap-14 justify-center h-full">
-                  <img src={ArrowDownUp} alt="" width={30} />
+                  <img
+                    src={ArrowDownUp}
+                    alt=""
+                    width={30}
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <p className="text-xs text-center rotate-90 whitespace-nowrap font-bold text-[#e7c129]">
                     Swipe Down
                   </p>
@@ -311,6 +329,8 @@ function Services() {
                   <img
                     src={activities1}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -318,6 +338,8 @@ function Services() {
                   <img
                     src={activities2}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -325,6 +347,8 @@ function Services() {
                   <img
                     src={activities3}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -332,6 +356,8 @@ function Services() {
                   <img
                     src={activities4}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -339,6 +365,8 @@ function Services() {
                   <img
                     src={activities5}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -346,6 +374,8 @@ function Services() {
                   <img
                     src={activities6}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -353,6 +383,8 @@ function Services() {
                   <img
                     src={activities7}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -360,6 +392,8 @@ function Services() {
                   <img
                     src={activities8}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -367,6 +401,8 @@ function Services() {
                   <img
                     src={activities10}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -374,6 +410,8 @@ function Services() {
                   <img
                     src={activities11}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -381,6 +419,8 @@ function Services() {
                   <img
                     src={activities12}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -388,6 +428,8 @@ function Services() {
                   <img
                     src={activities13}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -395,6 +437,8 @@ function Services() {
                   <img
                     src={activities14}
                     alt="Activities"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -411,7 +455,13 @@ function Services() {
                   <p className="text-xs text-center whitespace-nowrap font-bold text-[#e7c129]">
                     Swipe Right
                   </p>
-                  <img src={arrowRight} alt="" width={10} />
+                  <img
+                    src={arrowRight}
+                    alt=""
+                    width={10}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </span>
               </motion.span>
             </div>
@@ -537,6 +587,8 @@ function Services() {
                   <img
                     src={food1}
                     alt="Food"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -544,6 +596,8 @@ function Services() {
                   <img
                     src={food2}
                     alt="Food"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -551,6 +605,8 @@ function Services() {
                   <img
                     src={food3}
                     alt="Food"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -558,6 +614,8 @@ function Services() {
                   <img
                     src={food4}
                     alt="Food"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -565,6 +623,8 @@ function Services() {
                   <img
                     src={food5}
                     alt="Food"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
@@ -581,7 +641,13 @@ function Services() {
                   <p className="text-xs text-center whitespace-nowrap font-bold text-[#e7c129]">
                     Flip
                   </p>
-                  <img src={flip} alt="" width={10} />
+                  <img
+                    src={flip}
+                    alt=""
+                    width={10}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </span>
               </motion.span>
             </div>

@@ -6,23 +6,48 @@ const LoadingScreen = ({ onLoadingComplete }) => {
   const [isComplete, setIsComplete] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const intervalRef = useRef(null);
+  const hasCompletedRef = useRef(false);
 
   useEffect(() => {
-    const handleLoad = () => setIsLoaded(true);
-    if (document.readyState === "complete") {
-      setIsLoaded(true);
+    // Don't wait for full `window.load` (which can be delayed by large images/videos).
+    // Consider the app "ready" at DOMContentLoaded, with a safety timeout.
+    const MAX_WAIT_MS = 2500;
+    let timeoutId;
+
+    const markLoaded = () => setIsLoaded(true);
+
+    if (document.readyState !== "loading") {
+      markLoaded();
     } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
+      document.addEventListener("DOMContentLoaded", markLoaded, { once: true });
     }
+
+    timeoutId = setTimeout(markLoaded, MAX_WAIT_MS);
+
+    return () => {
+      document.removeEventListener("DOMContentLoaded", markLoaded);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   const completeLoading = useCallback(() => {
+    if (hasCompletedRef.current) return;
+    hasCompletedRef.current = true;
     setIsComplete(true);
     setTimeout(() => {
       onLoadingComplete();
     }, 1000);
   }, [onLoadingComplete]);
+
+  useEffect(() => {
+    // Hard safety: never allow the overlay to persist indefinitely.
+    const MAX_TOTAL_MS = 6000;
+    const forceCompleteId = setTimeout(() => {
+      completeLoading();
+    }, MAX_TOTAL_MS);
+
+    return () => clearTimeout(forceCompleteId);
+  }, [completeLoading]);
 
   useEffect(() => {
     // Fast loading progress - completes in ~1-1.5 seconds
