@@ -127,7 +127,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           {/* Main Content */}
           <div className="relative z-10 flex flex-col items-center gap-8 px-4">
             {/* Islamic Lantern Icon */}
-            <motion.div
+            {/* <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{
@@ -153,8 +153,8 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                 }}
               >
                 <g transform="translate(0, 10)">
-                  {/* Top hook */}
-                  <circle
+
+<circle
                     cx="50"
                     cy="5"
                     r="3"
@@ -171,16 +171,16 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                     strokeWidth="2"
                   />
 
-                  {/* Top dome */}
-                  <path
+
+<path
                     d="M 30 15 L 42 28 L 58 28 L 70 15 Z"
                     fill="none"
                     stroke="#d4af37"
                     strokeWidth="2.5"
                   />
 
-                  {/* Lantern body */}
-                  <rect
+
+<rect
                     x="37"
                     y="28"
                     width="26"
@@ -190,8 +190,8 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                     strokeWidth="2.5"
                   />
 
-                  {/* Geometric pattern inside */}
-                  <line
+
+<line
                     x1="37"
                     y1="40"
                     x2="63"
@@ -232,8 +232,8 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                     strokeWidth="1"
                   />
 
-                  {/* Bottom base */}
-                  <path
+
+<path
                     d="M 30 68 L 37 75 L 63 75 L 70 68"
                     fill="none"
                     stroke="#d4af37"
@@ -258,7 +258,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                   <circle cx="50" cy="85" r="3" fill="#d4af37" />
                 </g>
               </motion.svg>
-            </motion.div>
+            </motion.div> */}
 
             {/* Brand Name */}
             <motion.div
